@@ -2,6 +2,8 @@
 -----
 ## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
 
+**\* This is a simplified version of lab on length of ~45 to 60 minutes. If you are interested, feel free to explore the complete version [HERE](long/README.md)
+
 ### Introduction ###
 This lab is part of the APAC Cloud Test Drive and is the third lab about connecting and integrating CRM application rapidly.  
 This section describes integrating applications via Oracle Integration Cloud Service simply using web-based dashboard.
@@ -56,11 +58,11 @@ The key features of Oracle Integration Cloud Service include:
 
 [Click Here.](301-IntegrationsLab.md)
 
-## 302: Define Connections for CRM Customer Activity Service and REST Service Exposure ##
+## 302: Import and Define Connections for CRM Customer Activity Service and REST Service Exposure ##
 
 [Click Here.](302-IntegrationsLab.md)
 
-## 303: Create an Integration - An Orchestration Integration Flow ##
+## 303: Complete an Integration - An Orchestration Integration Flow ##
 
 [Click Here.](303-IntegrationsLab.md)
 

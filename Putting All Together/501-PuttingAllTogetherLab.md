@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 501: Update Source Code for Sending Push Notification from JEE Application to Mobile Cloud Service ##
+## 501: Update Settings for Sending Push Notification from JEE Application to Mobile Cloud Service ##
 
 ### Introduction ###
 On the completion of Lab 4 - Mobile Service and App, you should be able to run the 'Cafe Supremo' app on Android device and configured all necessary mobile backend services. Customer using Cafe Supremo app can logon, explore personalized promotion and menu.  
@@ -10,12 +10,12 @@ Rather than having the customer periodically checks the latest new promotion off
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Perform second iteration of 'Continuous Integration and Continuous Delivery', i.e. provision another set of code changes
+- Modify the Push Notification settings in the JEE Application
 - Call MCS API to send push notification from JEE application to mobile device
 
 ### Prerequisites ###
 + Completion of all previous 4 lab exercises: [Java Apps](../Java%20Apps/README.md), [Microservices](../Microservices/README.md), [Integration](../Integrations/README.md) and [Mobile](Mobile%20Service%20and%20App/README.md)
-+ Re-open the VirtualBox Virtual Machine image used previously in [Java Apps Lab 103](../Java%20Apps/103-JavaAppsLab.md), or [click here if you forget the VirtualBox installation and usage instruction](../Java%20Apps/virtualbox.md)
+
 
 ----
 
@@ -34,53 +34,44 @@ In this exercise, we will:
 
 ![](images/501/10.mobile.welcome.png)
 
-#### Modify Source Code from Developer Cloud Service ####
+#### Modify Java App Push Notification Configuration
 
-1. Recall in early Java Apps Lab [103: Continuous Integration & Delivery (CICD): Using Eclipse IDE, Commit and Push Code Change to Oracle Developer Cloud Service](../Java%20Apps/103-JavaAppsLab.md), we have made a simply change on the title of *welcome.jsp* (step 14):
+1. Go to home page of the Loyalty Management application. The Loyalty Management application URL should be in the format of:  
+`https://**<JCS WLS instance IP Adress>**/loyalty/jsp/welcome.jsp`  
 
-![](../Java%20Apps/images/103/23.png)
+  Click the [ **Configure Push Notification** ] URL at the bottom of the page
 
-2. Now, we need to further modify source code such that this JEE web application will make a call to Mobile Cloud Service to delivery mobile notification to end user mobile device.  
-Make sure your Oracle Enterprise Plugin for Eclipse (OEPE) in VirtualBox VM is running, with the previous import project opened.  
-(Refer to **Using VirtualBox** in the beginning and step 1 of [Java Apps Lab 103](../Java%20Apps/103-JavaAppsLab.md) if you forget how to)
+![](images/501/101.javaapp.png)
 
-![](../Java%20Apps/images/103/09.png)
+2. Update the MCS Notification Setting with respect to your environment - the values are available in the Mobile_App_Settings_Sample.json you've prepared previously in Step 2 of Lab 404.
+    - MCS Base URL: `your MCS baseUrl, https://{your-mcs-instance}.mobileenv.us2.oraclecloud.com:443`     
+    - Mobile Backend ID: `backendId in the json file`    
+    - MCS Anonymous Key: `anonymousToken in the json file`    
+    - Custom API Name: `API in the json file, LoyaltyMAnagementAPIXX`    
 
-3. Expand the project tree of *loyalty*, locate and right click on `confirm.jsp` and then click `Open` button like below:
+    Your json file should looks similar to this - **of course the vales are different**
+    ```json
+    {
+          "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
+          "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
+          "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
+          "anonymousToken":  "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
+          "API":"LoyaltyManagementAPI0X",
+          "senderID":"925757644219"
+    }
+    ```
 
-![](images/501/11.java.confirm.png)
+    When Copy-n-Paste to the web form, be careful
+      - do NOT add white space   
+      - you copy and paste the **COMPLETE** value     
+  Click [ **SAVE** ] button to save your new settings.
 
-4. On `confirm.jsp` design window opened, scroll to source code line ~95, update 4 values respectively, i.e. **baseUrl**, **API**, **backendId** and **anonymousToken**.
+![](images/501/102.push.png)
 
-![](images/501/12.java.change.png)
+3. Once the Push Notification Settings are saved, you can proceed to next lab.
 
-The corresponding values are available from step 2 - **Mobile_App_Settings_Sample.json** in this lab guide above, i.e. 
-```
-{
-      --> "baseUrl": "https://<Your Mobile Cloud Service Identity Domain Name>.mobileenv.us2.oraclecloud.com:443",
-      "applicationKey": "9722de7f-4ecf-443f-8e0e-714b2f6e0f9c",
-      --> "backendId": "4a9d0d32-8aad-48fb-b803-5315459dce9f",
-      --> "anonymousToken": "R1NFMDAwMTE2NzhfTUNTX01PQklMRV9BTk9OWU1PVVNfQVBQSUQ6Smk3cXBld3lrczlfbmI=",
-      --> "API":"LoyaltyManagementAPI0X",
-      "senderID":"925757644219"
-}
-```
-5. Enter `Ctrl` + `S` to save your change.
+![](images/501/103.save.png)
 
-6. Next, right click on `confirm.jsp` again, then select `Team` button and follow by click `Commit` button.
- 
-![](images/501/13.java.commit.png)
-
-7. The `Git Staging` window is opened, drag the *confirm.jsp* from `Unstaged Changes` area and drop it onto `Staged Changes` area.  
-Enter a short description on the textarea at right side and then click `Commit and Push` button at bottom.
-
-![](images/501/14.java.push.png)
-
-8. Wait for the changed project push to Developer Cloud Service, and on completion status dialog, click `OK` button to close.
-
-![](images/501/15.java.complete.png)
-
-\*Optional Step: Refer to [Java Apps Lab 103](../Java%20Apps/103-JavaAppsLab.md) - step 18 and onwards to verify source code being provisioned automatically under the scene, i.e. **Continuous Integration and Continuous Delivery**
 
 Your Loyalty Management JEE Application is now ready to create campaign offer and notify customer mobile device.
 

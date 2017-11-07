@@ -1,302 +1,199 @@
 # ORACLE Cloud Test Drive #
 -----
-## 303: Create an Integration - An Orchestration Integration Flow ##
+## 303: Complete an Integration - An Orchestration Integration Flow ##
 
 ### Introduction ###
 This tutorial demonstrates how to:
-- Create an integration flow on Integration Cloud Service (ICS) 
+- Complete an integration flow on Integration Cloud Service (ICS) 
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Explore and configure ICS Integration flow with REST and SOAP endpoints, and define data mapping along integration flow
-- Using the web-based click, configure, drag and drop techniques to define data mapping and integration integration resources detail on ICS dashboard
+- Explore ICS Integration flow with REST and SOAP endpoints, and complete the remaining data mapping along integration flow
+- Using the web-based click, configure, drag and drop techniques to explore integration resources detail and define data mapping on ICS dashboard
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
 - SOAP and REST Connections in ICS already configured (302-IntegrationsLab.md)
 
-#### Create an 'Orchestration' Integration ####
+#### Complete an 'Orchestration' Integration ####
 
 1. Using the Navigation Pane, click the hamburger menu icon in upper left corner to show the navigation pane, and then click `Integrations`.
 
 ![](images/303/01.home_hamburger_integrations.png)
 
-2. The home page of **Integrations** is shown, click `Create` button on the top left corner.
+2. The **Integrations** summary page is shown.  
+Locate the entity named **XXX_ICS_INTMGT (1.0)** from the list, click the hamburger menu icon on the right side and select `Edit`.
 
-![](images/303/02.integration_create.png)
+![](images/303/02.integration_edit.png)
 
-3. The **Create Integration - Select a Style\/Pattern** dialog window is shown.  
-    You could see different types of integration are available, including *Orchestration, Map Data, Publish To ICS and Subscribe To ICS*. However in this lab exercise, we will create an *Orchestration* integration.  
-    Click `Select` button under *Orchestration* box.   
+3. The integration orchestration editor of the previous imported integration flow **XXX_ICS_INTMGT (1.0)** is shown. This is an incompleted flow in which the following subsequent steps will complete the remaining part.
 
-![](images/303/03.integration_orchestration.png)
+![](images/303/03.integration_existing.png)
 
-4. A new dialog window **Create New Integration** is shown, enter the following information to create our *Integration*:
-    * **What triggers this integration?** Keep the default selected *Application event or business object*.
-    * **What do you want to call your integration?** Provide an unique and easily identified *Integration* Name, such as <Your Short Name>\_<System_Name>\_<Service_Name>. In our example, this is **KD_ICS_INTMGT**, while *KD* is short name of *Kelvin Durant*.
-	* **Identifier** The **Identifier** will be automatically filled-in while you type the **Name** above, however you can provide another unique identifier, suggest include your short name as prefix.
-	* **Version** Select Keep the default value. (Change only if you are going to create a new *versioned* integration)
-	* **What does this integration do? (Optional)** You can leave it empty or enter any meaningful text to describe this *Integration*.
-	* **Which package does this integration belong to? (Optional)** You can leave it empty or enter any meaningful package name to collectively group with other integrations.
-	
-![](images/303/04.integration_new.png)
-	
-5. Click `Create` button, the integration orchestration editor is shown.
+4. Before making any changes, let's review what has been pre-built during import.  
+Click to select the first node named **ProcessOrder**, and then click `Edit` 'pen' button in the pop-up menu.
 
-![](images/303/05.integration_editor.png)
+![](images/303/04.integration.processoffer.png)
 
-6. First of all, we are going to define how this integration flow being exposed to client consumer by setting up a **Trigger**.  
-    Now, click `Triggers` at the right side bar, the palette title on the right changed to **Triggers**.  
-    Select `REST`, the list of available *REST Trigger Connection* is shown.  
-    Drag and Drop your newly created *Trigger Connection* (Our example is 'KD_ICSINTMGT_ProcessOffer'), to the "+" icon of flow diagram inside the big *circle* under *START*.
+5. The **Configure Oracle REST Endpoint** dialog window is shown.  
+This page summarizes the interface of the imported integration flow, i.e. how to interact with this process via REST request and response with appropriate JSON format.  
+Click `< Back` button on the top right to review remaining detail.
 
-![](images/303/06.integration_start.png)
+![](images/303/05.integration.rest.summary.png)
 
-7. The **Configure Oracle REST Endpoint** dialog window is shown. Provide the following information:
-    * **What do you want to call your endpoint?** Enter `ProcessOffer`
-	* **What is the endpoint's relative resource URI?** Enter `/processoffer`
-	* **What action does the endpoint perform?** Select `POST`
-	* Check to select **Configure a request payload for this endpoint**
-	* Check to select **Configure this endpoint to receive the response**
-	* Leave others empty or unselect.
-	
-	Click `Next` button.
+6. This page summarizes the response payload detail, feel free to explore the detail on this page without making any changes. Click `<<< inline >>>` link in the middle.
 
-![](images/303/07.integration_rest.png)
+![](images/303/05.integration.rest.response.payload.png)
 
-8. The **Configure the Request Payload** page is shown, check:
-    * **Select the request payload file** `JSON Sample`
-	* **Select the type of payload with which you want the endpoint to receive** `JSON`
-	
-	Click `<<< inline >>>` link next to **--OR-- enter sample JSON**
-	
-![](images/303/08.integration_rest_request.png)
+7. The form of **Response Sample Json Payload** is shown. Notice the sample response payload already provided during import in the format of:  
+`{"activityid": "elit aliqua aliquip", "imgurl": "minim ipsum"}`  
+Click `Cancel` button at bottom to return.
 
-9. The **Request Sample Json Payload** page is shown.
-    Copy this text `{   "customerid": 21767684,   "offerid": 49531393,   "productid": 28916305,   "accepted": true }` to the text area under **Enter Sample JSON**.  
-    Click `OK` button at the bottom.
+![](images/303/05.integration.rest.response.payload1.png)
 
-![](images/303/09.integration_request_json.png)
+8. Click `< Back` button on the top right to review remaining detail.
 
-10. Click `Next` button to proceed next, **Configure the Response Payload** page, check:
-    * **Select the response payload file** `JSON Sample`
-	* **Select the type of payload with which you want the endpoint to reply** `JSON`
-	
-	Click `<<< inline >>>` link next to **--OR-- enter sample JSON**
+![](images/303/05.integration.rest.response.png)
 
-![](images/303/10.integration_rest_response.png)
+9. This page summarizes the request payload detail, feel free to explore the detail on this page without making any changes. Notice the sample request payload already provided during import in the format of:  
+`{"customerid": 21767684, "offerid": 49531393, "productid": 28916305,   "accepted": true}`  
+Click `< Back` button on the top right to review remaining detail.
 
-11. The **Response Sample Json Payload** page is shown.
-    Copy this text `{   "activityid": "10001-43513-v1.0",   "imgurl": "tmptext" }` to the text area under **Enter Sample JSON**.  
-    Click `OK` button at the bottom.
+![](images/303/05.integration.rest.request.png)
 
-![](images/303/11.integration_response_json.png)
+10. Finally, the **Welcome to the Oracle REST Endpoint Configuration Wizard** page is shown and summaries the overall setup of this REST endpoint interface.  
+Do not change anything and click `Cancel` button at top right corner to return the orchestration flow.
 
-12. Click `Next` button to proceed next, **Oracle REST Endpoint Configuration Summary** page.  
-    Your setup should look like below, then click `Done` button. We just finish defining a REST **Trigger** to expose this integration flow to client consumer.
-	
-![](images/303/12.integration_rest_done.png)
+![](images/303/05.integration.rest.endpoint.png)
 
-13. Back to the *Integration Orchestration Editor*, you can:
-    * Drag and drop to re-arrange each node of integration orchestration flow to different location.
-    * Click `-` or `+` button on top left corner to re-size flow diagram to fit your screen resolution.
-	* As best practice, regularly click `Save` button at the top left corner to store your work from time to time.
-	
-![](images/303/13.integration_half.png)
+11. Click to select the second node named **Map to CustomerSer...**, and then click `Edit` 'pen' button in the pop-up menu.
 
-14. Next, we are going to define a service callout, to **Invoke** an endpoint service - CRM Customer Service.  
-    Now, click `Invokes` at the right side bar, the palette title on the right changed to **Invokes**.  
-    Select `SOAP`, the list of available *SOAP Invoke Connection* is shown.  
-    Drag and Drop your newly created *Invoke Connection* (Our example is 'KD_CRM_CustomerService'), to the middle of integration flow, between **ProcessOffer** and **Map to ProcessOffer** activity.
+![](images/303/06.integration.map.png)
 
-![](images/303/14.integration.invoke.png)
+12. The **Map to CustomerServiceActivity** page is shown.  
+Notice that there are some green tick radio buttons on some of fields in **Source** tree at left hand side, and on some of fields in **Target** tree at right hand side. It means mappings have been configured and used between these source to target field entities. (Already done during import)  
+For example, the `customerId` under **Target** tree has been mapped with the same name field entity `customerId` from **Source** tree.  
+Now, let's explore the second field `activityName` under **Target**, click the text named `f(x), offerid, of acceptance, accepted` under **Mapping** column like below.
 
-15. The **Configure SOAP Endpoint** dialog window is shown. Provide the following information:
-    * **What do you want to call your endpoint?** Enter `CustomerServiceActivity`
-	* **What does this endpoint do?** Optional
-	* **Do you want to configure this as a callback invoke?** Select `No`
+![](images/303/06.integration.map1.png)
 
-![](images/303/15.integration.invoke.setup.png)
-	
-16. Do not change other values, click `Next` -> `Next` -> `Next` and finally `Done` buttons. You should have a similar integration flow as below.  
-    We just finish defining an **Invoke** to call a CRM customer service SOAP endpoint.  
-	
-	Now, we are going to define how different data fields are being passed incoming from **Trigger** to outgoing **Invoke*.  
-	Click the **Map to CustomerServiceActivty** node and then further click on the `pencil` icon to enter data mapper screen.
+13. The **Build Mappings** dialog window is shown. The mapping has been imported and done with the following mapping:  
+`<xsl:value-of select = 'concat("Offer ID: ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:offerid, " of acceptance ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:accepted)`  
+What does it mean? This mapping will take the `offerid` and `accepted` fields from request payload, alter and concatenate strings into a sample string like `Offer ID: 10001 of acceptance true`  
+Once review is done, click `Close` button at the bottom right corner.
 
-![](images/303/16.integration.invoke.map.png)
+![](images/303/06.integration.map2.png)
 
-17. In the data mapper window, drag the `customerid` radio button on left **Source** pane, and then drop to the `customerId` radio button on right **Target** pane.
+14. Back to the **Map to CustomerServiceActivity** page screen, click the text named `f(x), productid` under **Mapping** column like below.
 
-![](images/303/17.integration.map.cust.png)
+![](images/303/06.integration.map3a.png)
 
-18. A 'Green' line linking source and target customerId is created.
+15. The **Build Mappings** dialog window is shown with the imported mapping:  
+`<xsl:value-of select = 'concat("Offer for product ID: ", /nssrcmpr:execute/nsmpr0:request-wrapper/nsmpr0:productid)'>`  
+Once review is done, click `Close` button at the bottom right corner.
 
-![](images/303/18.integration.map.custpost.png)
+![](images/303/06.integration.map3.png)
 
-19. Next, we want to send text data on the `activityName` field of *addCustomerActivity* target, in the format of: `Offer ID: <'offerid' field from Source> of acceptance <'accepted' field from Source>`.  
-    In order to setup, click on the field `activityName` on the **Target** *addCustomerActivity* pane directly. The **Build Mappings** dialog window is shown.
+16. Back to the **Map to CustomerServiceActivity** page screen, click the last field text named `f(x)` under **Mapping** column like below.
 
-![](images/303/19.integration.map.activityname.png)
+![](images/303/06.integration.map4a.png)
 
-20. Expand `Mapping Components` from the left pane, then expand `Functions` -> `String`.  
-    Drag the `f(x) concat` from left pane, to the location of `-- Drag and Drop or Type value here...` under <activityName> in the right pane.
+17. The **Build Mappings** dialog window is shown with the imported mapping:  
+`<xsl:value-of select = 'fn:current-data()'>`  
+This is an out-of-the-box function provided by Integration Cloud Service, feel free to locate this function (under Functions->Date category) and many other functions by expand the **Mapping Component** tree at the bottom left corner.  
+Once review is done, click `Close` button at the bottom right corner.
 
-![](images/303/20.integration.activityname.concat.png)
+![](images/303/06.integration.map4.png)
 
-21. Click on `string1`, enter `'Offer ID: '`, then **Enter**.  
-    (\*Notice: Remember to put **`' '`**, i.e. the single quote to enclose `Offer ID` string)  
-    Expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)
+18. Back to the **Map to CustomerServiceActivity** page screen, click `Close` button on the top right corner.
 
-![](images/303/21.integration.activityname.concat1.png)
+![](images/303/06.integration.map5.png)
 
-22. Select on the last entry of concatenated string list, right click and select `Insert Sibling After`.
+19. Back to orchestration flow, click to select the third node named **CustomerServiceActivity**, and then click `Edit` 'pen' button in the pop-up menu.
 
-![](images/303/22.integration.activityname.concat2.png)
+![](images/303/07.integration.soap.png)
 
-23. Click on the newly added entry `-- Drag and Drop or Type value surrounded with quotes here...`, enter `' of acceptance '`, then **Enter**.  
-    Repeat last step 22 to add one more entry by `Insert Sibling After`.  
-	Expand `Source` from the left pane, drag the `accepted` field and drop it on the last entry `-- Drag and Drop or Type value surrounded with quotes here...`. A string is automatically inserted. \(This is the XSLT variable representation of 'accepted'\)  
-	Click `Save` on the top right corner to save your work, then click `Close` at the bottom to exit the **Build Mappings** window.
+20. The **Configure SOAP Endpoint** dialog window is shown. Due to the nature of SOAP based interface, there is no additional pages available to be configured.  
+Simply review this page and click `Cancel` button at top right corner.
 
-![](images/303/23.integration.activityname.concat3.png)
+![](images/303/07.integration.soap1.png)
 
-24. The `activityName` field is defined with **Mapping** `f(x), offerid, of acceptance, accepted`.  
-    Next, click on `activityDetail` link to setup this field.
+21. Back to orchestration flow, click to select the forth node named **IF Accept Offer**, and then click `Edit` 'pen' button in the pop-up menu.
 
-![](images/303/24.integration.activityname.concat4.png)
+![](images/303/08.integration.if.png)
 
-25. **(Simple Challenge)**  
-    Follow the same steps as what you did to setup `activityName` field, setup the `activityDetail` field in the format of:  
-    `'Offer for product ID: ' + <productid>`  
-    Do not forget to click `Save` to save your work, before click `Close` at the bottom to exit the **Build Mappings** dialog window.
+22. The **Accept Offer** page is shown. Notice a logic decision `lower-case(accepted) = "true"` has been provided in the text area and there is a green tick radio button next to `accepted` field under **Source** on the left.  
+This function evaluates to return result true or false based on the lower case string value of `accepted`, in which the result is used to determine how message flow towards **IF** or **ELSE** path.  
+On review done, click `Close` at top right corner.
 
-![](images/303/25.integration.activitydetail.png)
+![](images/303/08.integration.logic.png)
 
-26. The `activityDetail` field is defined with **Mapping** `f(x), productid`.  
-    Finally, click `activityDate` field to setup up this field.
+23. Under *if* or *otherwise* condition, different response data will be returned. Now, there is an one task remaining in the *if* path to complete the entire integration flow.
 
-![](images/303/26.integration.activityDate.png)
+![](images/303/34.integration.if.difference.png)
 
-27. The **Build Mappings** dialog window is shown. Expand `Mapping Components` from the left pane, then expand `Date`.  
-    Drag the `f(x) current-date` from left pane, to the location of `-- Drag and Drop or Type value here...` under <activityDate> in the right pane.  
-	Click `Save` to save your work and then click `Close` to exit the **Build Mappings** dialog window.
+24. In order to handle proper response when customer *accept* an offer, we need to confirgure the missing **Map** of response data on the *if* path.  
+Click `Actions` on the right side pane, then drag the `Map` and drop it onto the integration flow, between **IF Accept Offer** node and the join point of two switch lines, which appears with `+` icon like below.
 
-![](images/303/27.integration.activityDate1.png)
+![](images/303/35.integration.if.add1.png)
 
-28. The *Data Mapping* for *CustomerService Activity* has just been completed.  
-    Click `Validate`, the green banner `Mapping is valid and ready to use.` appears at the top.  
-	(Optional) You can test the data mapping by click `Test` button on the right. Try it!  
-	Click `Close` to return integration flow editor and click `Save` again to save your work.
+![](images/303/35.integration.if.add2.png)
 
-![](images/303/28.integration.map.validate.png)
-
-29. Finally, we are going to define how to response data back to client consumer thru this integration flow.  
-    The logic is based on the acceptance - **accepted** field of an offer from customer by:  
-	- If **true**, means customer accepted the offer, then return the CRM logged *activityId* and the QR code image URL, which is generated based on *offerId*.
-	- If **false**, means customer denied the offer, then return the CRM logged *activityId* (still required as a 'denied' customer action) and an empty QR code image URL, i.e. no QR code image will be displayed.  
-	
-    To do so, click `Actions` on the right side pane, then drag the `Switch` and drop it onto the integration flow, between **CustomerServiceActivity** node and **Map to ProcessOffer** node.
-	
-![](images/303/29.integration.switch.before.png)
-	
-30. You should have a similar flow diagram as below. Adjust node and line position, zoom out or zoom in if necessary.
-
-![](images/303/30.integration.switch.after.png)
-
-31. Click the newly added switch node - `Undefined`, click `Edit`.
-
-![](images/303/31.integration.switch.undefined.png)
-
-32. The **Expression Editor** is shown. Perform the following step to setup a condition:
-    1. Enter `Accept Offer` in the **Expression Name**.  
-	2. Expand **Components** -> `Functions` -> `String`, drag the `fx lower-case` from left pane, and drop it onto the *New Condition* text area at right pane.  
-	3. Expand **Source**, drag the `accepted` field from left pane, and drop it to replace the 'string' in newly added function `fn:lower-case(string)` at right pane.  
-	It should become or similar to `fn:lower-case(/nssrcmpr:execute/nsmpr2:request-wrapper/nsmpr2:accepted)`  
-	*(Namespace may be different)  
-	4. Enter `"true"` in the text area under `=` drop down box.  
-	5. Click `Expression Mode` button on the top left corner.
-
-![](images/303/32.integration.expression.true.png)
-
-33. Verify the content in **Expression** and the **Expression Summary**, click `Validate` on the top left corner.  
-    A green banner `Expression is valid and ready to use` is shown. Click `Close` to back integration flow editor.
-
-![](images/303/33.integration.expression.validate.png)
-
-34. Under *if* or *otherwise* condition, different response data will be returned. Here we delete the default `Map to ProcessOffer` response data mapping.  
-    Click on the `Map to ProcessOffer`, click the hamburger icon, then click `Delete` to remove this node and confirm deletion on pop-up dialog.
-
-![](images/303/34.integration.delete.png)
-
-35. click `Actions` on the right side pane, then drag the `Map` and drop it onto the integration flow, between **IF Accept Offer** node and the join point of two switch lines, which appears with `+` icon.
-
-![](images/303/35.integration.if.add.png)
-
-36. The **Data Mapping** dialog window is shown.  
+25. Once the `Map` is properly dropped, the **Data Mapping** dialog window is shown.  
     Expand the **Source** in left pane, drag the `return` field under `$CustomerServiceActivity` -> `addCustomerActivityResponse`, and drop it onto `activityid` in right pane.  
 	Click `imgurl` to proceed advance data mapping.
     
 ![](images/303/36.integration.if.map.png)
 
-37. The **Build Mappings** window dialog is shown.  
+26. The **Build Mappings** window dialog is shown.  
     Expand **Mapping Components** under **Source** in left pane, and then expand `Functions` -> `String`.  
 	Drag the function `fx concat` and drop it onto `- Drag and Drop or Type value here...` under **Mapping** in right pane.  
-	Click `Save`.
 	
 ![](images/303/37.integration.if.map1.png)
 
-38. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'` (Hostname obtained from 'Microservices' lab)  
+27. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'`, notice don't forget to put the single quote in the front and the end of the URL. (Hostname obtained from 'Microservices' lab)  
     Next, expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)  
 	Click `Save`, and then click `Close` button at the bottom to return previous screen.
 
 ![](images/303/38.integration.if.map2.png)
 
-39. *Data Mapping* should be the same as below. Click `Validate` and and then click `Close`.
+28. *Data Mapping* should be the same as below. Click `Validate` and and then click `Close`.
 
 ![](images/303/39.integration.if.map3.png)
 
-40. **(Simple Challenge)**  
-    Complete the `Map to ProcessOffer` at the `Otherwise` path. The only different is:  
-	Enter **''** for `imgurl`, i.e. 2 X single quote, such that an empty string will be returned. (Instead of *'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname\>/ctdqr/v1/offer/'* at the `IF Accept Offer` path)  
-	The result should be the same as below.  
-    **(\*Hints: Repeat step 35 to 39, and instructor will give you a quick demo here if needed)**
+29. The *Process Offer* integration flow development is done.  
 
-![](images/303/40.integration.otherwise.png)
+![](images/303/40.integration.flow.complete.png)
 
-    The result of **Mapping** should look like this:
-	
-![](images/303/40.integration.otherwise.result1.png)
-	
-41. The *Process Offer* integration flow development is done.  
-    However, there is an error showing at the top right corner, telling that **primary business identifier for Tracking** is needed. 
-
-![](images/303/41.integration.error.png)
-
-42. Click on the hamburger icon next to Error icon and **Last Modified: Just Now** at the top right.
+30. Click on the hamburger icon and then select `Tracking` at the top right corner.
 
 ![](images/303/42.integration.tracking.png)
 
-43. The **Business Identifiers for Tracking** dialog window is shown.  
+31. The **Business Identifiers for Tracking** dialog window is shown.  
     Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
-    Now, from the **Source** at left pane, drag the first `customerid` field, and drop it onto the first row of **Tracking Field** at right pane.  
-	Repeat the same for `offerid` field and `productid` field respectively.  The result screen looks like below.  
-	Click `Done` button at the bottom on completion of tracking setup, and then click `Close` to go back to ICS dashboard main screen.
+    Notice the tracking business identifiers: `customerid`, `offerid` and `productid` have already been mapped. The screen looks like below.  
+	Click `Cancel` button at the bottom on review completion of tracking setup to close the dialog.
 
-![](images/303/43.integration.tracking.identifier.png)
+![](images/303/43.integration.tracking.identifier1.png)
 
-44. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
-    Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on serving production traffic.  
+32. Click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
+
+![](images/303/43.integration.edit.done.png)
+
+33. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
+    Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on when serving production traffic.  
 	Click `Activate` button at the bottom.
 
 ![](images/303/44.integration.activate.png)
 
-45. Wait for a couple of minutes for the integration activation.  
+34. Wait for a couple of minutes for the integration activation.  
     Once it is done, a green banner telling the integration was activated successfully and the result looks like below:
 
 ![](images/303/45.integration.activate.done.png)
 
-46. The integration service is now ready for testing.
+35. Save or copy into clipboard from your browser the unique URL: `https://integration-xxxxxxxxxxx.integration.xxx.oraclecloud.com:443/integration/flowapi/rest/XXX_ICS_INTMGT/`
+
+36. The integration service is now ready for testing.
 
 [Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab.md)
 

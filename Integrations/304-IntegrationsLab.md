@@ -84,6 +84,15 @@ In this exercise, we will:
 ![](images/304/09.monitoring.audit.png)
 ![](images/304/10.monitoring.audit1.png)
 
+13. Finally, we can logout from Integration Cloud Service before proceed to next lab exercise.  
+On the top right corner of ICS dashboard, click on your username and then click `Sign Out`.
+
+![](images/304/11.logout.png)
+
+14. Click `Confirm` button to signout.
+
+![](images/304/11.logout.confirm.png)
+
 You have finished this lab.
 
 [Back to Integrations Lab Home](README.md)

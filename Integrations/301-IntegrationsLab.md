@@ -15,8 +15,21 @@ In this exercise, we will:
 
 #### Navigating Oracle Integration Cloud Service ####
 
-1. [Sign in](sign.in.to.oracle.cloud.md) to [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in). First select your datacenter then provide the identity domain and credential of **Integration Cloud Service \(ICS\)**.  
-(**\*Notice**: The identity domain and credential of this Integrations Lab should be **DIFFERENT** from those you were using in JavaApps Lab and Microservices Lab previously. Please check with detail provided by instructor)  
+1. On completion of previous Microservices lab, we can logout from Cloud Dashboard before proceed this lab exercise.  
+On the top right corner of dashboard, click on your username and then click `Sign Out`.
+
+![](images/301/00.logout.png)
+
+2. Click `Confirm` button to signout.
+
+![](images/301/00.logout.confirm.png)
+
+3. Sign in to Cloud again from [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in), first select your datacenter then provide the identity domain and credential of **Integration Cloud Service \(ICS\)**.  
+
+**Alternatively  you can access thru the Access Document - Integrations Lab section provided by instructor.**  
+
+(**\*Notice**: The identity domain and credential of this Integrations Lab is **DIFFERENT** from those you were using in JavaApps Lab and Microservices Lab previously. Please check carefully with detail provided by instructor)  
+
 After a successful login you will see your Dashboard. Find the **integration** services tile and click the hamburger icon. In the dropdown menu click `Open Service Console`.
 
 ![](images/301/01.dashboard.png)
@@ -43,7 +56,7 @@ After a successful login you will see your Dashboard. Find the **integration** s
 
 The navigation pane provides you with access to all the development features in the Oracle Integration Cloud Service.
 
-[Procced to Next - 302: Define Connections for CRM Customer Activity Service and REST Service Exposure](302-IntegrationsLab.md)
+[Procced to Next - 302: Import and Define Connections for CRM Customer Activity Service and REST Service Exposure](302-IntegrationsLab.md)
 
 or
 
