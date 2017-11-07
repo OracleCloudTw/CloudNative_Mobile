@@ -34,7 +34,7 @@ If you want to know about more details on the above mobile services, please refe
 The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with external services to implement a mobile application called "Cafe Supremo" for loyalty management using Oracle MCS (Mobile Cloud Service).
 
 For the loyalty management mobile application, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integrations by doing the below jobs through this lab.
-- Import MBE (Mobile BackEnd) package and configure connectors to integrate external services, including the microservices on ACCS to query offers and generate QR code, and the service on ICS to accept or reject offer and update the existing CRM.
+- Import MBE (Mobile BackEnd) package and configure connectors to integrate external services, including the microservice on ACCS to generate QR code, and the service on ICS to accept or reject offer and update the existing CRM.
 - Verify the endpoints and the implementation of the custom API. The custom API is imported in the MBE package, and leverage the connectors to interact with the external services.
 - Set up Push Notification, and configure the Cafe Supremo mobile app to work with the MBE imported.
 - Track customer behaviors like "Offer Accept by users" using custom analytics report. **[Note]** this section is optional. You can skip this section first, and come back after you complete all the other sections.

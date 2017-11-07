@@ -1,4 +1,5 @@
 ![](common/images/CTD_introduction_TBD.png)
+
 ---
 # ORACLE Cloud Test Drive #
 

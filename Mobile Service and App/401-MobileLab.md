@@ -57,7 +57,7 @@ To create the above 3 Connectors, you will:
 11. Back in the 'Policies' step, select the policy '*.connector/QueryOffers0X(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
-12. Set a custom value as the Host URL of the offer service deployed on ACCS, e.g. `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. Click 'Save'.
+12. Set a custom value as the Host URL of the offer service deployed on JCS, e.g. `http://<IP Address of LoyaltyMgmt in #1 JavaApp Lab>`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
 13. Back in the 'Policies' step, select the policy '*.connector/ProcessOffer0X(1.0).Connector_Endpoint' and click on 'Edit'.
