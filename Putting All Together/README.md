@@ -31,7 +31,7 @@ At the end of this workshop, you will have a basic understanding of how Oracle C
 
 ### Prerequisites ###
 - Completion of all previous 4 lab exercises: [Java Apps](../Java%20Apps/README.md), [Microservices](../Microservices/README.md), [Integration](../Integrations/README.md) and [Mobile](Mobile%20Service%20and%20App/README.md)
-- Running Virtual Machine image used previously in Java Apps and Microservices labs
+- Running Brackets used previously in Java Apps and Microservices labs
 - An Android OS Device (mobile phone or tablet) with an active Google Account, or check with instructor if you don't.
 
 # Lab Exercise: #
