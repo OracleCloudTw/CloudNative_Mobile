@@ -1,4 +1,4 @@
-Update: July 5, 2017
+Update: November 7, 2017
 
 ## 0.1 Introduction
 
@@ -18,9 +18,9 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 - Please be careful when you copy-n-paste. Additional **WHITE SPACE** *before* or *after* the information you've copied might cause error.
 
-# 1. Create Offer REST API Microservice
+# 1. Create QR Code Generator Microservice
 
-## 1.1 Create Initial Git Repository - Offer REST API
+## 1.1 Create Initial Git Repository - QR Code Generator
 
 1. Login to Developer Cloud Service if you haven't done so. If you are in the Cloud Dashboard, you can use Developer Cloud Service Hamburger Menu to navigate to DevCS.
 
@@ -34,240 +34,7 @@ This lab is part of the APAC Cloud Test Drive and is the 2nd lab about creating 
 
 ![](images/002.createrepo.png)
 
-4. On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
-
-5. In the New Repository wizard enter the following information and click **Create**.
-
-	- **Name:** `OfferMicroservice`
-	- **Description:** `Microservice to provide REST API of Offer Details`
-	- **Initial content:** `Import existing repository`
-	- **Enter the URL:** `https://github.com/APACTestDrive/OfferMicroservice.git`
-
-```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
-```
-
-![](images/003.newrepo.png)
-
-6. You have now created a new Git repository stored within the Developer Cloud Service that is based on an existing repository
-
-![](images/004.repo.png)
-
-## 1.2 Create Default Build and Deployment Process - Offer REST API
-
-Now that we have the source code in our Developer Cloud Service managed Git Repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will setup a **shell script** build process in this section.
-
-### 1.2.1 Create Default Build Process - Offer REST API
-
-1. Click **Build** on the navigation panel to access the build page and click **[+ New Job]**
-
-![](images/005.navibuild.png)
-
-2. In the New Job popup window, enter `Offer REST API Build` for Job Name and click **Save**.
-
-```diff
--Please BE CAREFUL that you have not added extra white space before or after the information
-```
-
-![](images/006.newbuildjob.png)
-
-3. You are now placed into the job configuration screen.
-
-![](images/007.newjob.png)
-
-4. Click the **Source Control** tab. Select **Git** radio button. In the Repositories section, select **OfferMicroservice.git** from the URL drop down.
-
-![](images/008.srcctrl.png)
-
-  **Note:** Make sure you select the Git repository for the Offer REST API Microservice.
-
-5. Click **Triggers** tab. Check **Based on SCM polling schedule**.
-
-![](images/009.trigger.png)
-
-6. Click the **Build Steps** tab, click **Add Build Step** and select **Execute shell**.
-
-![](images/010.steps.png)
-
-7. In the Command textarea, enter: `npm install`
-
-![](images/011.npm.png)
-
-8. Click the **Post Build** tab. Check **Archive the artifacts**. For File to Archive, enter `**/target/*` and verify **GZIP** is chosen as the Compression Type.
-
-![](images/012.post.png)
-
-9. Click **Save** to complete the configuration.
-
-![](images/013.save.png)
-
-10. A build should start automatically within 1-2 minutes. If it does not start automatically, click on the **[ Build Now ]** button.
-
-![](images/014.buildnow.png)
-
-11. The status will change to something similar to the following diagrams.
-
-![](images/015.queue.png)
-
-You might need to wait for a few minutes before the build job to get started.
-
-![](images/016.running.png)
-
-12. The build will take serval minutes to complete. Wait for the build to complete before continue to the next step - **as we need the build artifact to create the deployment configuration**.
-
-![](images/017.complete.png)
-
-### 1.2.2 Create Default Deployment Process - Offer REST API
-
-1. Click **Deploy** to access the Deployments page and click the **[+ New Configuration]** button.
-
-![](images/018.navideploy.png)
-
-2. Enter the following data:
-
-	- **Configuration Name:** OfferAPIDeploy
-	- **Application Name:** offer
-
-```diff
--Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
-```
-
-![](images/019.deployname.png)
-
-3. Next to the right hand side of **Deployment Target**, click the **[New]** button and select **Application Container Cloud...**
-
-![](images/020.deployaccs.png)
-
-4. Enter the following information and click **Test Connection**.
-
-	- **Data Center:** `your datacenter, e.g. em2, em3, etc`
-	- **Identity Domain:** `your identity domain`, e.g. gse00012345, etc
-	- **Username:** `username to login to MyService`, e.g. lisa.jones, etc - that is the username you are using.
-	- **Password:** `password of the cloud user`, that is the password you are using
-
-![](images/021.accsconn.png)
-
-5. If successful, click **[Use Connection]** button  
-
-![](images/022.useconn.png)
-
-6. In the ACCS Properties, set
-
-	- **Runtime** to `Node`
-	- **Subscription** to `Hourly`
-	- Set **Type** to `Automatic` and **CHECK** Deploy stable build only
-
-  **DOUBLE check the Runtime is Node**
-
-![](images/023.deploynodejs.png)
-
-7. Select from the **Job**, this name should match the build job above, e.g. `Offer REST API Build`
-
-8. Select from the **Artifact**, this name should match the archive artifact above and the package.json of your source code, e.g. `target/offer.zip`  
-
-![](images/024.deployjobname.png)
-
-9. **Check** the `Include ACCS Deployment` box and add the following json.
-
-```json
-{
-	"memory":"1G",
-	"instances":"1",
-	"services": [
-	{
-	  "identifier": "DBService",
-	  "type": "DBAAS",
-	  "name": "apacctddb",
-	  "username": "loyalty",
-	  "password": "Welcome_1"
-	}
-	]
-}
-```
-
-![](images/024.json.png)
-
-10. After fill in the above information, click **Save** button.
-
-![](images/025.deploysave.png)
-
-11. In your deployment job, click the gear drop down and select **Start**
-
-![](images/026.deploystart.png)
-
-12. The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
-
-![](images/027.deploysuccess.png)
-
-## 1.3 Login to Oracle Application Container Cloud Service
-
-1. Navigate back to the Oracle Public Cloud MyService. Click **Dashboard** to return back to main Cloud Service Dashboard.
-
-![](images/028.dashboard.png)
-
-2. On the Application Container Cloud Service (ACCS) click the humburger button and select **Open Service Console**
-
-![](images/029.accsgoto.png)
-
-3. On the ACCS Service Console you can view all the deployed applications including our newly create **Offer**.
-
-![](images/030.accsconsole.png)
-
-## 1.4 CHECK ACCS Service Binding to DBCS
-
-1. Click the **[ Offer ]** to see the ACCS application Details
-
-![](images/031.accsoffer.png)
-
-2. Check the 2nd Tab, **Deployments**
-
-![](images/032.bindings.png)
-
-3. In the **Service Bindings** section, you SHOULD see the database binding. **You do NOT need to change anything.**
-
-![](images/033.addbinding.png)
-
-
-## 1.5 Verify the Working Service
-
-1. In you application panel, you should see the base URL of your application. Something like https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com
-
-![](images/037.url.png)
-
-2. Copy and paste the URL into the address bar of a new tab to bring up the application.
-
-  Be reminded that you will need the REST endpoint and the **offer id** in order to generate a QR code.
-
-  The final URL should looks like this
-
-https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ptmgt/v1/offers/10001
-
-![](images/038.browser.png)
-
-```diff
-+ you might want to copy your OWN URLs for Offer API, e.g.
-+   https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ptmgt/v1/offers/
-+   https://offer-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/
-+ and put it in, e.g. Notepad
-+   You will need to use it later, e.g. Lab 401.
-```
-
-3. You should be able to get offer details from the Microservice.
-
-![](images/039.result.png)
-
-4. Configuration! You've completed the frist microservice. Let's move on the the QR Code Microservice, which is actually very similar to this Part 1.
-
-# 2. Create QR Code Generator Microservice
-
-## 2.1 Create Initial Git Repository - QR Code Generator
-
-1. Login to Developer Cloud Service if you haven't done so.
-2. In the left hand navigation panel, click **Project**
-
-![](images/101.project.png)
-
-3. On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
+   On the right side in the **REPOSITORIES** section, click on **New Repository** to create a new Git Repository.
 
 ![](images/102.newrepo.png)
 
@@ -346,7 +113,7 @@ This Lab assumes your have direct connection to public Internet, i.e. **NOT behi
 
 ![](images/121.openjs.png)
 
-2. In line 12, change the URL to your identity domain, i.e. what you have used in **Section 1.5**. As you can see, this is the URL of the **Offer REST API Microservice**
+2. In line 12, change the URL to your identity domain, i.e. in the format of **`http://<IP Address used in #1 JavaApp Lab>/crm/resources/offer/`**. As you can see, this is the URL of the **Offer REST API Microservice**
 
 ![](images/122.line12.png)
 
@@ -547,15 +314,16 @@ Building stage: please wait - it might takes a few minutes before the job change
 
   - **Configuration Name:** QRCodeGeneratorDeploy
   - **Application Name:** qrcodegenerator
+  
+```diff
+-Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
+```
 
 ![](images/183.createdeploy.png)
 
-4. **As you have created the deployment in the Offer REST API
-Microservice, you can REUSE the same target**.
+4. Next to the right hand side of **Deployment Target**, click the **[New]** button and select **Application Container Cloud...**
 
-   In the **Deployment Target**, choose the **SAME** one you created above. It should be something similar to `Application Container Cloud` **em2 / your-identity-domain / your-user-name**
-
-![](images/184.dc.png)
+![](images/020.deployaccs-reuse.png)
 
 5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.   
 

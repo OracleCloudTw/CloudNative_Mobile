@@ -71,7 +71,7 @@ On early integration lab: [3. Rapid Connect Applications by Oracle Integration C
 ![](images/502/08.offer.qr.png)
 
 **What has just happened?**    
-On early [Microservice Lab](../Microservices/README.md), we have deployed 2 microservices - Offer and QR respectively leveraging Developer and Application Container Cloud Service. Upon 'Accept' offer by customer, the result offer detail and QR image will be displayed on mobile device.
+On early [Microservice Lab](../Microservices/README.md), we have deployed a microservice - QR Code service leveraging Developer and Application Container Cloud Service. Upon 'Accept' offer by customer, the result offer detail and QR image will be displayed on mobile device.
 
 ![](images/502/mcs2acc.png)
 

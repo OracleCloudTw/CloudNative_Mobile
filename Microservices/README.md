@@ -1,6 +1,6 @@
 # Oracle APAC Cloud Test Drive
 
-Last Update: July 10, 2017
+Last Update: November 7, 2017
 
 ## Microservice Lab
 
@@ -65,11 +65,10 @@ In addition, you can choose to integrate with other Oracle Cloud services. You c
 
 ## About the Exercise Today
 
-We will use Developer Cloud Service to create and deploy 2 microservices in Application Container Cloud in the coming 1 hour :smile:.
+We will use Developer Cloud Service to create and deploy a microservice in Application Container Cloud in the coming 1 hour :smile:.
 - Leverage existing 3rd party Git Repository
 - Create build and deploy jobs in Developer Cloud Service
 - Use IDE with Developer Cloud Service
-- Leverage Database Cloud Service in your applications
 - Deploy on Application Container Cloud Service
 
 ![](images/000.todaylab.png)   

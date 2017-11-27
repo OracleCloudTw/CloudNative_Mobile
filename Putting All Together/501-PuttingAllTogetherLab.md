@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 501: Update Source Code for Sending Push Notification from JEE Application to Mobile Cloud Service ##
+## 501: Update Settings for Sending Push Notification from JEE Application to Mobile Cloud Service ##
 
 ### Introduction ###
 On the completion of Lab 4 - Mobile Service and App, you should be able to run the 'Cafe Supremo' app on Android device and configured all necessary mobile backend services. Customer using Cafe Supremo app can logon, explore personalized promotion and menu.  
@@ -10,7 +10,7 @@ Rather than having the customer periodically checks the latest new promotion off
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Perform second iteration of 'Continuous Integration and Continuous Delivery', i.e. provision another set of code changes
+- Modify the Push Notification settings in the JEE Application
 - Call MCS API to send push notification from JEE application to mobile device
 
 ### Prerequisites ###
@@ -44,7 +44,7 @@ In this exercise, we will:
 ![](images/501/101.javaapp.png)
 
 2. Update the MCS Notification Setting with respect to your environment - the values are available in the Mobile_App_Settings_Sample.json you've prepared previously in Step 2 of Lab 404.
-    - MCS Identity Domain Name: `your identity domain, gse000XXXXX`     
+    - MCS Base URL: `your MCS baseUrl, https://{your-mcs-instance}.mobileenv.us2.oraclecloud.com:443`     
     - Mobile Backend ID: `backendId in the json file`    
     - MCS Anonymous Key: `anonymousToken in the json file`    
     - Custom API Name: `API in the json file, LoyaltyMAnagementAPIXX`    
@@ -66,7 +66,7 @@ In this exercise, we will:
       - you copy and paste the **COMPLETE** value     
   Click [ **SAVE** ] button to save your new settings.
 
-![](images/501/102.settings.png)
+![](images/501/102.push.png)
 
 3. Once the Push Notification Settings are saved, you can proceed to next lab.
 

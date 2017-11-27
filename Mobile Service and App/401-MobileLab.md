@@ -57,13 +57,13 @@ To create the above 3 Connectors, you will:
 11. Back in the 'Policies' step, select the policy '*.connector/QueryOffers0X(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
-12. Set a custom value as the Host URL of the offer service deployed on ACCS, e.g. `https://offer-<ACCS_DOMAIN_NAME>.apaas.<DATACENTER>.oraclecloud.com`. Click 'Save'.
+12. Set a custom value as the Host URL of the offer service deployed on JCS, e.g. `http://<IP Address of LoyaltyMgmt in #1 JavaApp Lab>`. Click 'Save'.  
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
 13. Back in the 'Policies' step, select the policy '*.connector/ProcessOffer0X(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_ProcessOffer_Endpoint.png)
 
-14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.<DATACENTER>.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Save'.
+14. Set a custom value as the full service URL of the 'Process Offer' service deployed on ICS, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.<DATACENTER>.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Save'.  
 ![](../common/images/mobile/401-Import_Package_Update_ProcessOffer_Endpoint.png)
 
 15. Back in the 'Policies' step, verify that you have successfully set new values for all three connector endpoint policies, and click 'Update' to complete importing the package.
