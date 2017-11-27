@@ -51,8 +51,8 @@ On the Dashboard there are predefined tiles for different services. If the **Dev
 ![alt text](images/101/02.new.project.png)
 
 8. Enter the name of the project and set the desired properties.   
-	**Name:** `APAC Cloud Test Drive`   
-	**Description:** `APAC Cloud Test Drive project hub`   
+	**Name:** `APAC Cloud Test Drive XX` (XX - Use your assigned ID, e.g. 01)  
+	**Description:** `APAC Cloud Test Drive project hub XX` (XX - Use your assigned ID, e.g. 01)  
 	and click **Next**
 
 ![](images/101/02.new.project.detail.png)
