@@ -323,7 +323,7 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 4. Next to the right hand side of **Deployment Target**, click the **[New]** button and select **Application Container Cloud...**
 
-![](images/020.deployaccs - reuse.png)
+![](images/020.deployaccs-reuse.png)
 
 5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.   
 
