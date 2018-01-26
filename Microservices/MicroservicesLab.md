@@ -113,7 +113,7 @@ This Lab assumes your have direct connection to public Internet, i.e. **NOT behi
 
 ![](images/121.openjs.png)
 
-2. In line 12, change the URL to your identity domain, i.e. in the format of **`http://<IP Address used in #1 JavaApp Lab>/crm/resources/offer/`**. As you can see, this is the URL of the **Offer REST API Microservice**
+2. In line 12, change the URL to your identity domain, i.e. in the format of **`http://<IP Address used in #1 JavaApp Lab>`**. As you can see, this is the URL of the **Offer REST API Microservice**
 
 ![](images/122.line12.png)
 
