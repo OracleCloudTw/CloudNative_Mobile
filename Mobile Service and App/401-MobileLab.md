@@ -44,10 +44,10 @@ To create the above 3 Connectors, you will:
 6. The OMCe Portal URL is in the format: https://<URL above from `Load Balancer` section above>/mobileui
 ![](../common/images/mobile/400-OMC-Home.png)
 
-7. In MCS Portal, click on the hamburger icon located at the left top corner of the service introduction page. From the navigation pane, select “Mobile Apps” -> “Packages”, and click on the “New Import” green button.
+7. In OMCe Portal, click on the hamburger icon located at the left top corner of the service introduction page. From the navigation pane, select “Mobile Apps” -> “Packages”, and click on the “New Import” green button.
 ![](../common/images/mobile/401-New_Import_Package.png)
 
-8. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBE0X.zip" with the correct postfix assigned to you.
+8. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBEXX.zip" with the correct postfix assigned to you.
 ![](../common/images/mobile/401-Import_Package_Select_File.png)
 
 9. Once the file has been uploaded, click 'Next'.
@@ -84,11 +84,20 @@ To create the above 3 Connectors, you will:
 #### Configure credential to access 'Process Offer' service on OIC ####
 The 'Process Offer' service deployed on OIC is configured to use 'Basic Authentication' in the 'integrations' lab. To integrate with the 'Process Offer' service, you should configure the OIC credential on OMCe so that the connector on OMCe is authorized to access the 'Process Offer' on OIC.
 
-1. From the navigation pane, click on “Administration” to open the "Administration" page. Scroll down to the bottom and click on "Keys & Certificates" to open the "CSF Keys & Certificates" box.
+1. From the navigation pane, click to expand “Settings” and click "Credentials". In the Credentials page, click on `+ New CSF Key` button.  
 ![](../common/images/mobile/401-CSF_Navigate_To_CSF.png)
 
-2. In the "CSF Keys & Certificates" box, under tab "CSF Keys", select the key "ICS0X" (0X is the postfix assigned to you), set "Short Description" to be "ICS0X" (0X is the postfix assigned to you), and set the user name and password to be the credential of the OIC domain, that you use in the "integrations" lab. Click "Save and Close" button.
+2. In the **New CSF Key** area, enter the following information:  
+-**Key Name**: ICSXX (XX is your assigned postfix)
+-**Short Description**: ICSXX (Same as above or meaningful description)
+-**User Name**: username used for Integration Cloud
+-**Password**: password used for Integration Cloud
+-**Confirmed Password**: Same as above
+Click `Save` button.
 ![](../common/images/mobile/401-CSF_Update_CSF.png)
+
+3. A new CSF Key with your given name is shown on the credentials list.
+![](../common/images/mobile/401-CSF_Done.png)
 
 #### Test the connector 'Process Offer' ####
 
