@@ -1,21 +1,21 @@
 # ORACLE Cloud Test Drive #
 -----
-## 304: Testing the service and Monitoring with ICS Dashboards ##
+## 304: Testing the service and Monitoring with OIC Dashboards ##
 
 ### Introduction ###
 This tutorial demonstrates how to:
-- Consume and monitor a service exposed by Integration Cloud Service (ICS) 
+- Consume and monitor a service exposed by Oracle Integration Cloud (OIC) 
 
 ### About this tutorial ###
 In this exercise, we will:
 - Test an integration flow with REST trigger connection being exposed
-- Examine test results from varies ICS monitoring facilities
+- Examine test results from varies OIC monitoring facilities
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
-- SOAP and REST connections and an orchestration flow in ICS already configured (303-IntegrationsLab.md)
+- SOAP and REST connections and an orchestration flow in OIC already configured (303-IntegrationsLab.md)
 
-#### Testing and Monitoring Your Work on ICS ####
+#### Testing and Monitoring Your Work on OIC ####
 
 1. Previously we have successfully deployed an integration flow which accepts a REST JSON request, route to a SOAP CRM customer service and then reply a REST JSON response. Let's test this service and monitor how it goes.  
 	To do so, [install Postman and use Google Chrome browser to access here](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop), launch it after installation.
@@ -24,8 +24,9 @@ In this exercise, we will:
 
 2. In the Postman, provide the following information:
 - Select **POST** from drop down list of HTTP methods.
-- In **Enter request URL** text box: Put the URL `https://integration-<Your ICS Identity Domain>.integration.us2.oraclecloud.com/integration/flowapi/rest/<Your Integration Service Name>/v01/processoffer`
-- Under **Authentication** tab: select `Basic Auth` from drop down list and enter your ICS username and password respectively.
+- In **Enter request URL** text box: Put the URL `https://<OIC Instance Name>-<Your OIC Identity Domain>.<Your OIC Datacenter Location>.oraclecloud.com/ic/api/integration/v1/flows/rest/<Your Integration Service Name>/1.0/processoffer`
+**Alternatively, the request URL can be obtained from access document provided by instructor.**
+- Under **Authentication** tab: select `Basic Auth` from drop down list and enter your OIC username and password respectively.
 
 ![](images/304/00.postman.basic.png)
 

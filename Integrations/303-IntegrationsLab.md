@@ -4,16 +4,16 @@
 
 ### Introduction ###
 This tutorial demonstrates how to:
-- Complete an integration flow on Integration Cloud Service (ICS) 
+- Complete an integration flow on Oracle Integration Cloud (OIC) 
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Explore ICS Integration flow with REST and SOAP endpoints, and complete the remaining data mapping along integration flow
-- Using the web-based click, configure, drag and drop techniques to explore integration resources detail and define data mapping on ICS dashboard
+- Explore OIC Integration flow with REST and SOAP endpoints, and complete the remaining data mapping along integration flow
+- Using the web-based click, configure, drag and drop techniques to explore integration resources detail and define data mapping on OIC dashboard
 
 ### Prerequisites ###
 - Oracle Public Cloud Service account including Integration Cloud Service
-- SOAP and REST Connections in ICS already configured (302-IntegrationsLab.md)
+- SOAP and REST Connections in OIC already configured (302-IntegrationsLab.md)
 
 #### Complete an 'Orchestration' Integration ####
 
@@ -170,13 +170,13 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 ![](images/303/42.integration.tracking.png)
 
 31. The **Business Identifiers for Tracking** dialog window is shown.  
-    Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru ICS.  
+    Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru OIC.  
     Notice the tracking business identifiers: `customerid`, `offerid` and `productid` have already been mapped. The screen looks like below.  
 	Click `Cancel` button at the bottom on review completion of tracking setup to close the dialog.
 
 ![](images/303/43.integration.tracking.identifier1.png)
 
-32. Click `Save` and `Close` buttons respectively to go back to ICS dashboard main screen.
+32. Click `Save` and `Close` buttons respectively to go back to OIC dashboard main screen.
 
 ![](images/303/43.integration.edit.done.png)
 
@@ -195,7 +195,7 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 
 36. The integration service is now ready for testing.
 
-[Procced to Next - 304: Testing the service and Monitoring with ICS Dashboards](304-IntegrationsLab.md)
+[Procced to Next - 304: Testing the service and Monitoring with OIC Dashboards](304-IntegrationsLab.md)
 
 or
 
