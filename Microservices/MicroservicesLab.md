@@ -330,11 +330,11 @@ Building stage: please wait - it might takes a few minutes before the job change
   - **Data Center:** `your datacenter, e.g. em2, em3, etc`
   - **Identity Domain:** `your  Identity Service Id, which can be obtained from:`  
     Access to Application Container Cloud Service dashboard  
-    ![](images/185.test.accs.png)
+    ![](images/185.test.accs.png)  
     Copy the `Identity Service Id` from the ACCS dashboard, and paste the Id into **Identity Domain** text box  
-    ![](images/185.test.accs1.png)
+    ![](images/185.test.accs1.png)  
   - **Username:** `username to login to MyService, e.g. cloud.admin, etc`
-  - **Password:** `password of the cloud user`
+  - **Password:** `password of the cloud user`s
 
 ![](images/185.test.png)
 
