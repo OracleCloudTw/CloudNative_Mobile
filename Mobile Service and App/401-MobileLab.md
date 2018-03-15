@@ -99,6 +99,7 @@ Click `Save` button.
 3. A new CSF Key with your given name is shown on the credentials list.
 ![](../common/images/mobile/401-CSF_Done.png)
 
+
 #### Test the connector 'Process Offer' ####
 
 Once the connectors have been imported and configured completely, you can test the connector. In this lab, you will test the connector 'Process Offer'.
