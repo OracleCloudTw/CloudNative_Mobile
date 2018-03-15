@@ -4,31 +4,23 @@
 
 ### Introduction ###
 This tutorial demonstrates how to:
-- Import and define ICS connections for a REST trigger service exposure and invoke an external SOAP service
+- Import and define OIC connections for a REST trigger service exposure and invoke an external SOAP service
 
 ### About the Exercise Today ###
 In this exercise, we will:
-- Using the web-based click and configure techniques to import and define ICS connection resources: **SOAP** and **REST** respectively.
+- Using the web-based click and configure techniques to import and define OIC connection resources: **SOAP** and **REST** respectively.
 
 ### Prerequisites ###
-- Oracle Public Cloud Service account including Integration Cloud Service
-- An Integration Archive File (IAR) name as `XXX_ICS_INTMGT_01_lab.iar` distributed by instructor
+- Oracle Public Cloud Service account including Integration Cloud
+- An Integration Archive File (IAR) name as `CXX_ICS_INTMGT_01_lab.iar` distributed by instructor
 
 #### Import Integration Cloud Service Project Artifact ####
 
-1. Go to **Integrations** Summary Page by click on the `Integrations` blue icon.
+1. Go to **Integrations** Summary Page by click on the `Integrations` from the left pane.
 
 ![](images/302/01.home_integrate.png)
 
-Alternatively, you can go to **Integrations** Summary Page by click the hamburger icon at the top left corner, click `Designer` and then `Integrations`.
-
-![](images/302/02.home_hamburger.png)
-
-![](images/302/03.home_hamburger_designer.png)
-
-![](images/302/01.home_hamburger_integrate.png)
-
-2. Click `Import` on the top right corner, the **Import Integration?** dialog window appears. Click `Browse` button.
+2. Click `Import` on the top right corner, the **Import Integration** dialog window appears. Click `Browse` button.
 
 ![](images/302/02.integration_import.png)
 
@@ -98,7 +90,7 @@ Notice that `No Security Policy` is selected as this is required by the endpoint
 
 17. A *SOAP Connection* to CRM Customer Service was updated and ready to be \*invoked\*.  
 
-#### Define REST Connection for ICS Service Exposure ####
+#### Define REST Connection for OIC Service Exposure ####
 
 18. Now we are going to update the **XXX_ICSINTMGT_ProcessOffer** connection.  
     However, this time the *Connection* is **NOT** to \*invoke\* any endpoint service, but instead it is a *\*trigger\** which is being called by a front client, i.e. A mobile client *triggers* to this *REST* connection service.  
@@ -127,7 +119,7 @@ Similarly, the **Save Changes?** dialog window appears to warn about reactivatin
 
 ![](images/302/19.connection_save1.png)
 
-23. Two *Connections* are just made ready, the **SOAP Connection - \*Invoke\* to CRM Customer Service** and **REST Connection - \*Trigger\* to ICS for Process Offer** respectively.
+23. Two *Connections* are just made ready, the **SOAP Connection - \*Invoke\* to CRM Customer Service** and **REST Connection - \*Trigger\* to OIC for Process Offer** respectively.
 
 [Procced to Next - 303: Complete an Integration - An Orchestration Integration Flow](303-IntegrationsLab.md)
 
