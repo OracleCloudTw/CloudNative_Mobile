@@ -328,7 +328,11 @@ Building stage: please wait - it might takes a few minutes before the job change
 5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.   
 
   - **Data Center:** `your datacenter, e.g. em2, em3, etc`
-  - **Identity Domain:** `your identity domain, e.g. gse00012345, etc`
+  - **Identity Domain:** `your  Identity Service Id, which can be obtained by:`
+  Access to Application Container Cloud Service dashboard  
+  ![](images/185.test.accs.png)
+  Copy the `Identity Service Id` from the ACCS dashboard  
+  ![](images/185.test.accs1.png)
   - **Username:** `username to login to MyService, e.g. cloud.admin, etc`
   - **Password:** `password of the cloud user`
 
@@ -393,7 +397,9 @@ Building stage: please wait - it might takes a few minutes before the job change
 
   The final URL should looks like this
 
-	https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/10001
+	{URL copied from ACCS Service Console}/ctdqr/v1/offer/10001  
+	or  
+	https://qrcodegenerator-{your-identity-domain}.{datacenter-location}.oraclecloud.com:443/ctdqr/v1/offer/10001
 
 ![](images/194.qrurl.png)		
 
@@ -403,8 +409,8 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 ```diff
 + you might want to copy your OWN URLs for QR Code API
-+   https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com/ctdqr/v1/offer/
-+   https://qrcodegenerator-{your-identity-domain}.apaas.{your-data-center}.oraclecloud.com
++   {URL copied from ACCS Service Console}/ctdqr/v1/offer/
++   {URL copied from ACCS Service Console}
 + and put it in, e.g. Notepad
 +   You will need to use it later, e.g. Lab 304 Step 27.
 ```
