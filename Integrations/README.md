@@ -1,6 +1,6 @@
 # ORACLE Cloud Test Drive #
 -----
-## 3. Rapid Connect Applications by Oracle Integration Cloud Service ##
+## 3. Rapid Connect Applications by Oracle Integration Cloud ##
 
 **\* This is a simplified version of lab on length of ~45 to 60 minutes. If you are interested, feel free to explore the complete version [HERE](long/README.md)
 
@@ -12,20 +12,20 @@ This section describes integrating applications via Oracle Integration Cloud Ser
 
 ![](images/ics.scope.png)
 
-In this exercise, we will connect to backend application and serve frontend mobile consumer request using Oracle Integration Cloud Service. When ICS receives a request from mobile consumer, it routes to CRM to perform customer activity log about acceptance of a product offer, and then it returns QR code image URL if user accepted the offer.
+In this exercise, we will connect to backend application and serve frontend mobile consumer request using Oracle Integration Cloud. When OIC receives a request from mobile consumer, it routes to CRM to perform customer activity log about acceptance of a product offer, and then it returns QR code image URL if user accepted the offer.
 
 **Lab Assumption**
 + You are an 'Integration Architect' who integrates CRM system rapidly
 + The CRM system and required service endpoint are ready to be connected and consumed
 + QR Code service is ready in Application Container Cloud Service after second lab
 
-**Oracle Integration Cloud Service (ICS)** is a complete, secure, but lightweight integration solution that enables you to connect your applications in the cloud. It simplifies connectivity between your applications and connects both your applications that live in the cloud and your applications that still live on premises. Oracle Integration Cloud Service provides secure, enterprise-grade connectivity regardless of the applications you are connecting or where they reside.
+**Oracle Integration Cloud (OIC)** is a complete, secure, but lightweight integration solution that enables you to connect your applications in the cloud. It simplifies connectivity between your applications and connects both your applications that live in the cloud and your applications that still live on premises. Oracle Integration Cloud provides secure, enterprise-grade connectivity regardless of the applications you are connecting or where they reside.
 
 ![](images/00.ics.png)
 
-Oracle Integration Cloud Service provides native connectivity to Oracle Software as a Service (SaaS) applications, such as Oracle Sales Cloud, Oracle RightNow Cloud, and so on. Oracle Integration Cloud Service adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices. You only need to create a connection that provides minimal connectivity information for each system. Finally, the visual data mapper enables you to quickly create direct mappings between the trigger and invoke data structures from the mapper.  
+Oracle Integration Cloud provides native connectivity to Oracle Software as a Service (SaaS) applications, such as Oracle Sales Cloud, Oracle RightNow Cloud, and so on. Oracle Integration Cloud adapters simplify connectivity by handling the underlying complexities of connecting to applications using industry-wide best practices. You only need to create a connection that provides minimal connectivity information for each system. Finally, the visual data mapper enables you to quickly create direct mappings between the trigger and invoke data structures from the mapper.  
 Once you integrate your applications and activate the integrations to the runtime environment, the dashboard displays information about the running integrations so you can monitor the status and processing statistics for each integration. The dashboard measures and tracks the performance of your transactions by capturing and reporting key information. You can manage business identifiers that track fields in messages and manage errors by integrations, connections, or specific integration instances.  
-The key features of Oracle Integration Cloud Service include:
+The key features of Oracle Integration Cloud include:
 1. **Connect**
     - Auto-Associated SaaS connections
 	- Native SaaS Adaptors
@@ -50,11 +50,11 @@ The key features of Oracle Integration Cloud Service include:
 - Monitor integration flow transaction and endpoint status, performance statistics and business identifiers
 
 ### Prerequisites ###
-- Oracle Public Cloud Service account including Integration Cloud Service
+- Oracle Public Cloud Service account including Integration Cloud
 
 # Lab Exercise: #
 
-## 301: Navigating Oracle Integration Cloud Service ##
+## 301: Navigating Oracle Integration Cloud ##
 
 [Click Here.](301-IntegrationsLab.md)
 
@@ -66,7 +66,7 @@ The key features of Oracle Integration Cloud Service include:
 
 [Click Here.](303-IntegrationsLab.md)
 
-## 304: Testing the service and Monitoring with ICS Dashboards ##
+## 304: Testing the service and Monitoring with OIC Dashboards ##
 
 [Click Here.](304-IntegrationsLab.md)
 
