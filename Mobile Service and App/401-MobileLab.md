@@ -25,6 +25,8 @@ To create the above 3 Connectors, you will:
 
 #### Import the MBE package ####
 
+**Alternatively, you can bypass step 1 to 6 by access to the Mobile Cloud URL which is available from Access Document provided by instructor**
+
 1. Sign in to Mobile Cloud by using the **Cloud Account with Identity Cloud Service** domain Id and credential provided in the Access Document.
 
 2. In the dashboard screen, click on "Open Service Console" under **Mobile** tile.
@@ -42,40 +44,40 @@ To create the above 3 Connectors, you will:
 6. The OMCe Portal URL is in the format: https://<URL above from `Load Balancer` section above>/mobileui
 ![](../common/images/mobile/400-OMC-Home.png)
 
-4. In MCS Portal, click on the hamburger icon located at the left top corner of the service introduction page. From the navigation pane, select “Mobile Apps” -> “Packages”, and click on the “New Import” green button.
+7. In MCS Portal, click on the hamburger icon located at the left top corner of the service introduction page. From the navigation pane, select “Mobile Apps” -> “Packages”, and click on the “New Import” green button.
 ![](../common/images/mobile/401-New_Import_Package.png)
 
-5. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBE0X.zip" with the correct postfix assigned to you.
+8. Click on "Choose a package file " and select the MBE package file "package-LoyaltyMgmt_MBE0X.zip" with the correct postfix assigned to you.
 ![](../common/images/mobile/401-Import_Package_Select_File.png)
 
-6. Once the file has been uploaded, click 'Next'.
+9. Once the file has been uploaded, click 'Next'.
 ![](../common/images/mobile/401-Import_Package_File_Validated.png)
 
-7. On the 'confirm' step, the contents of the package are shown. The package should include Mobile Backend 'LoyaltyMgmt_MBEXX', Client 'MyAndroidClientXX', API 'LoyaltyMgmtXX', API implementation 'LoyaltyMgmtXX', and 3 connectors 'GenerateQRCodeXX', 'ProcessOfferXX', and 'QueryOffersXX'. Make sure the postfix is correct in each object to be imported. Click 'Next'
+10. On the 'confirm' step, the contents of the package are shown. The package should include Mobile Backend 'LoyaltyMgmt_MBEXX', Client 'MyAndroidClientXX', API 'LoyaltyMgmtXX', API implementation 'LoyaltyMgmtXX', and 3 connectors 'GenerateQRCodeXX', 'ProcessOfferXX', and 'QueryOffersXX'. Make sure the postfix is correct in each object to be imported. Click 'Next'
 ![](../common/images/mobile/401-Import_Package_Confirm.png)
 
-8. On the 'Import Results' step, verify all objects have been imported successfully. Click 'Next'.
+11. On the 'Import Results' step, verify all objects have been imported successfully. Click 'Next'.
 ![](../common/images/mobile/401-Import_Package_Results.png)
 
-9. On the 'Policies' step, select the policy '*.connector/GenerateQRCodeXX(1.0).Connector_Endpoint' and click on 'Edit'.
+12. On the 'Policies' step, select the policy '*.connector/GenerateQRCodeXX(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_GenerateQRCode_Endpoint.png)
 
-10. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com`. Click 'Save'.
+13. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_GenerateQRCode_Endpoint.png)
 
-11. Back in the 'Policies' step, select the policy '*.connector/QueryOffersXX(1.0).Connector_Endpoint' and click on 'Edit'.
+14. Back in the 'Policies' step, select the policy '*.connector/QueryOffersXX(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_QueryOffers_Endpoint.png)
 
-12. Set a custom value as the Host URL of the offer service deployed on JCS, e.g. `http://<IP Address of LoyaltyMgmt in #1 JavaApp Lab>`. Click 'Save'.  
+15. Set a custom value as the Host URL of the offer service deployed on JCS, e.g. `http://<IP Address of LoyaltyMgmt in #1 JavaApp Lab>`. Click 'Save'.  
 ![](../common/images/mobile/401-Import_Package_Update_QueryOffers_Endpoint.png)
 
-13. Back in the 'Policies' step, select the policy '*.connector/ProcessOfferXX(1.0).Connector_Endpoint' and click on 'Edit'.
+16. Back in the 'Policies' step, select the policy '*.connector/ProcessOfferXX(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_ProcessOffer_Endpoint.png)
 
-14. Set a custom value as the full service URL of the 'Process Offer' service deployed on OIC, e.g. `https://<OIC_INSTANCE_NAME>-<OIC_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com/ic/api/integration/v1/flows/rest/CXX_ICS_INTMGT/1.0/processoffer`. Click 'Save'.  
+17. Set a custom value as the full service URL of the 'Process Offer' service deployed on OIC, e.g. `https://<OIC_INSTANCE_NAME>-<OIC_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com/ic/api/integration/v1/flows/rest/CXX_ICS_INTMGT/1.0/processoffer`. Click 'Save'.  
 ![](../common/images/mobile/401-Import_Package_Update_ProcessOffer_Endpoint.png)
 
-15. Back in the 'Policies' step, verify that you have successfully set new values for all three connector endpoint policies, and click 'Update' to complete importing the package.
+18. Back in the 'Policies' step, verify that you have successfully set new values for all three connector endpoint policies, and click 'Update' to complete importing the package.
 ![](../common/images/mobile/401-Import_Package_Complete_Update_Policies.png)
 
 
