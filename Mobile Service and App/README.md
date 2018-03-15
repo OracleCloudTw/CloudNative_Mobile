@@ -15,13 +15,13 @@ As well as Business Challenges, enterprises have some of difficulties in develop
 ![](../common/images/mobile/Technical_Challenges_in_Mobile.PNG)
 
 ## Oracle Mobile Solution Strategy ##
-To overcome the above challenges, Oracle encourages developers to use any of the popular tools available – whether it’s native development with iOS and Android, to 3rd party and open frameworks like Ionic, Angular, Sencha, and Xamarin. We call it "Mobile Client Agnostic". Oracle also incorporate mobile services that offer data sync, storage, location services, messaging, access to local services like camera, contacts, GPS, etc. There’s a trend towards low code, no code development - Oracle supports this trendy tool called MAX (Mobile Application Accelerator) as part of Mobile Cloud Service (MCS).
+To overcome the above challenges, Oracle encourages developers to use any of the popular tools available – whether it’s native development with iOS and Android, to 3rd party and open frameworks like Ionic, Angular, Sencha, and Xamarin. We call it "Mobile Client Agnostic". Oracle also incorporate mobile services that offer data sync, storage, location services, messaging, access to local services like camera, contacts, GPS, etc. There’s a trend towards low code, no code development - Oracle supports this trendy tool called MAX (Mobile Application Accelerator) as part of Oracle Mobile Cloud, Enterprise (OMCe).
 ![](../common/images/mobile/Oracle_Mobile_Solution_Strategy.PNG)
 
 In summary, Oracle provides end to end solution to give you overcoming notable business and technical challenges.
 
 ### Oracle Mobile Services ###
-Here you can see which mobile services are ready for you through just accessing Oracle MCS (Mobile Cloud Service) as below:
+Here you can see which mobile services are ready for you through just accessing OMCe (Oracle Mobile Cloud, Enterprise) as below:
 + Out of the box mobile services (Platform APIs): We are providing prebuilt, tested and optimized mobile services like analytics, push notification, offline data synchronization, location, object storage, database, app polices, API management, integration management, security and user management, and more features like intelligent bot are coming.
 + In addition to the Platform APIs, you can develop custom APIs and code to extend your mobile services. (e.g.: SNS integration, Google Map integration, external system integration, etc.) In other words, mobile applications can call custom APIs as wells as platform APIs to interact various data sources.
 + For client IDEs to develop mobile applications, we can support any IDE as well as mobile frameworks like Oracle MAX (Low code development), JET (JavaScript-based Hybrid App Dev.) and MAF (Java-based Hybrid App Dev.)
@@ -31,7 +31,7 @@ Here you can see which mobile services are ready for you through just accessing 
 If you want to know about more details on the above mobile services, please refer to [the following link](https://docs.oracle.com/en/cloud/paas/mobile-cloud/index.html).
 
 ### About the Exercise Today ###
-The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with external services to implement a mobile application called "Cafe Supremo" for loyalty management using Oracle MCS (Mobile Cloud Service).
+The hard part of mobile development is integration and managing all server-side services. In this exercise, you will see how easily you can enable/develop mobile services like push notification, API creation and integrations with external services to implement a mobile application called "Cafe Supremo" for loyalty management using OMCe (Oracle Mobile Cloud, Enterprise).
 
 For the loyalty management mobile application, you can make it all work and play nicely together using platform APIs (out of box mobile services) and custom APIs for external integrations by doing the below jobs through this lab.
 - Import MBE (Mobile BackEnd) package and configure connectors to integrate external services, including the microservice on ACCS to generate QR code, and the service on ICS to accept or reject offer and update the existing CRM.
