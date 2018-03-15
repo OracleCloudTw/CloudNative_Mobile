@@ -325,20 +325,24 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 ![](images/020.deployaccs-reuse.png)
 
-5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.   
+5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.  
+
+![](images/185.test.png)
 
   - **Data Center:** `your datacenter, e.g. em2, em3, etc`
   - **Identity Domain:** `your  Identity Service Id, which can be obtained from:`  
     Access to Application Container Cloud Service dashboard  
+	
     ![](images/185.test.accs.png)  
+	
     Copy the `Identity Service Id` from the ACCS dashboard, and paste the Id into **Identity Domain** text box  
+	
     ![](images/185.test.accs1.png)  
+	
   - **Username:** `username to login to MyService, e.g. cloud.admin, etc`
   - **Password:** `password of the cloud user`s
 
-![](images/185.test.png)
-
-6. Once test is success, click **Use Connection**
+6. Once test is successful, click **Use Connection**
 
 ![](images/186.testgood.png)
 
