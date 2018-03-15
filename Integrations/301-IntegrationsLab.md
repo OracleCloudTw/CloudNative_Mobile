@@ -49,7 +49,7 @@ After a successful login you will see your Dashboard. Find the **Integration Clo
 
 ![](images/301/07.navigation_pane.png)
 
-The navigation pane provides you with access to all the development features in the Oracle Integration Cloud Service.
+The navigation pane provides you with access to all the development features in the Oracle Integration Cloud.
 
 [Procced to Next - 302: Import and Define Connections for CRM Customer Activity Service and REST Service Exposure](302-IntegrationsLab.md)
 
