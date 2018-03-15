@@ -87,8 +87,10 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 ![alt text](images/102/13.cert.png "Certificate Warning")   
   If you see the certificate warning, **Check** `Accept this certificate when connecting to this JCS instance` and click [**OK**]
 
-![alt text](images/102/13.cluster.png "deploy to cluster")   
-  **Check** `ctdCluster` and click [**OK**] to deploy the application to the Java Cloud Service cluster
+![alt text](images/102/13.cluster.png "deploy to cluster")  
+or   
+![alt text](images/102/13.server.png "deploy to server")  
+  **Check** `ctdCluster` or `apacctdj_server_1` and click [**OK**] to deploy the application to the Java Cloud Service cluster
 
 11. Click **Save**. 
 
