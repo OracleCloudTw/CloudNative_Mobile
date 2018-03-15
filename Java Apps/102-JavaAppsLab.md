@@ -68,8 +68,13 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 
 - **Configuration Name**: any name to identify deployment configuration - we use **loyalty**.
 - **Application Name**: application name in JCS. This will determine the application's URL context path - we use **loyalty**.
-- **Deployment Target**: click **New** and select Java Cloud Service and define connection properties such as **Version**, **Protocol**, **Host**, **HTTPS Port** and **credentials**.  
-  [\(Find out the Java Cloud Service Host and HTTPS Port.\)](java.cloud.md).  
+- **Deployment Target**: click **New** and select **Java Cloud Service** and define connection properties:  
+--**Version: Oracle Weblogic Server 12c (12.2.x or higher)**  
+--**Protocol: SSH Tunnel**  
+--**Host: [\(Find out the Java Cloud Service Host and HTTPS Port.\)](java.cloud.md)**  
+--**HTTPS Port: 7002 (Default)**  
+--**Administration Port: 9001 (Default)**  
+--**credentials**  
   Java Cloud Service - WebLogic Admin Username and Password, i.e. `weblogic` and `Welcome_1` respectively, or provided by instructor separately.
 - **Type**: select **Automatic** which means auto deploy after a successful execution of the build job. Select your previously created job and its artifact to deploy.
 - **Job**: The **LoyaltyManagementBuild** Build Step defined in early stage of this lab.
