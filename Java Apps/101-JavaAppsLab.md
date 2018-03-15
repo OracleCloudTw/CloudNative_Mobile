@@ -22,12 +22,18 @@ In this exercise, we will:
 1. Open a browser and go to [cloud.oracle.com](https://cloud.oracle.com). Click **Sign In**.
 ![cloud.oracle.com](images/sign-in/sign.01.cloud.oracle.com.png)
 
-2. Select `Traditional Cloud Account`, then select    
-    `Public Cloud Service - EMEA`   
+2. Follow the lab access document provided by instructor, per each of Lab section, you should be able to locate corresponding datacenter info, for example:  
+![](images/sign-in/sign.01.cloud.account.png)  
+or  
+![](images/sign-in/sign.01.cloud.account1.png)  
+
+Because this is the first Lab 1xx - Java App, we need to login to DevCS and therefore:  
+Select `Traditional Cloud Account`, then select    
+    `US Commercial 2 (us2)`   
 or    
-    `Public Cloud Servce - US`    
-according to the datacenter of your environment.  Click **My Services** button.
-![](images/sign-in/sign.02.select.datacenter1.png)
+    `EMEA Commercial 2 (em2)`    
+according to the datacenter of your environment listed in access document.  Click **My Services** button.
+![](images/sign-in/sign.02.select.datacenter.png)
 
 3. Enter the **Developer Cloud Service \(DevCS\)** identity domain and click **Go**. The identity domain and associated credential should be provided by instructor.
 ![](images/sign-in/sign.03.identity.domain.png)
