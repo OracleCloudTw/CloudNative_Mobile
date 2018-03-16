@@ -20,22 +20,28 @@ In this exercise, we will:
 A notification profile defines the certificate or keys that is required by push notification providers to send out push notifications. 
 In this lab, you will create a notifications profile and associate the that with the client application (Cafe Supremo mobile application), so that OMCe can send push notification to the Cafe Supremo mobile application.
 
-1. On the navigation pane, select “Mobile Apps” -> “Backends”. Enter "XX" (XX is the postfix assigned to you) to search for the mobile backend imported by you. Select "LoyaltyMgmt_MBEXX" (0X is the postfix assigned to you) and click on "Keys" arrow to expand the section.
+1. On the navigation pane, select “Mobile Apps” -> “Backends”. Enter "XX" (XX is the postfix assigned to you) to search for the mobile backend imported by you. Select "LoyaltyMgmt_MBEXX" (XX is the postfix assigned to you) and click on "Keys" arrow to expand the section.
 
 You should see a client called "MyAndroidClientXX". Scroll right to find the "Application Key" column.
 ![](../common/images/mobile/403-Client_Settings.png)
 
-4. **Copy the values of "Application Key" and replace the value of the property "applicationKey" in the "Mobile_App_Settings_Sample.json" file.**  Save the file for later use.
+2. **Copy the values of "Application Key" and replace the value of the property "applicationKey" in the "Mobile_App_Settings_Sample.json" file.**  Save the file for later use.
 ![](../common/images/mobile/403-Copy_ApplicationKey_To_Json.png)
 
-5. Switch to the "Profiles" tab of the "MyAndroidClient0X" client, and click on "New Profile" button to create the notification profile.
+3. Click "Open" button to drill down into the Mobile Backend detail.
+![](../common/images/mobile/403-Begin_New_Profile_001.png)
+
+4. Click "Clients" on Mobile Backend left pane and then click the client named "MyAndroidClientXX".
+![](../common/images/mobile/403-Begin_New_Profile_002.png)
+
+5. Switch to the "Profiles" tab of the "MyAndroidClientXX" client, and click on "New Profile" button to create the notification profile.
 ![](../common/images/mobile/403-Begin_New_Profile.png)
 
-6. Enter `FCM0X` (change `0X` to the postfix assigned to you, e.g: 03) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the Sender ID. Keep `Google Messaging (GCM or FCM)` as the "Notification Service" and `XMPP` as the "Send Method", and click on “Create”. (These are the keys that are generated from Google.)
+6. Enter `FCMXX` (change `XX` to the postfix assigned to you, e.g: 03) as the "Name. Paste `AAAA14t0nbs:APA91bHtR-V_lZEcMgaEFIJd_UrybuBjNyPG4N0ZoA33UqbZ9CywL_e2FnIfoS9lvPV5gut3Mm_ZMoex7PE1-YL-7ACaP3CnrDYpl8Qq3_jfsO3HMJYS-Mzr_X-xWpgdqWswVHsSUgDX` as the "API Key" and `925757644219` as the "Sender ID". Keep `Google Messaging (GCM or FCM)` as the "Notification Service" and `XMPP` as the "Send Method", and click on “Create”. (These are the keys that are generated from Google.)
 
    ![](../common/images/mobile/403-Create_New_Profile.png)
 
-7. The notification profile has been created and associated with the your client "MyAndroidClient0X". Click on the link "< LoyaltyMgmt_MBE0X" in the navigation bar to navigate back to the mobile backend.
+7. The notification profile has been created and associated with the your client "MyAndroidClientXX". Click on the link "< LoyaltyMgmt_MBEXX" in the navigation bar to navigate back to the mobile backend.
 ![](../common/images/mobile/403-Profile_Navigate_Back.png)
 
 8. Verify that your client is "Notification Enabled".
