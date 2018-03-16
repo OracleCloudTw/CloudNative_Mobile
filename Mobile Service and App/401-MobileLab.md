@@ -62,7 +62,7 @@ To create the above 3 Connectors, you will:
 12. On the 'Policies' step, select the policy '*.connector/GenerateQRCodeXX(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_GenerateQRCode_Endpoint.png)
 
-13. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<ACCS_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com`. Click 'Save'.
+13. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<OIC_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_GenerateQRCode_Endpoint.png)
 
 14. Back in the 'Policies' step, select the policy '*.connector/QueryOffersXX(1.0).Connector_Endpoint' and click on 'Edit'.
@@ -106,28 +106,28 @@ Click `Save` button.
 
 Once the connectors have been imported and configured completely, you can test the connector. In this lab, you will test the connector 'Process Offer'.
 
-1. On the navigation pane, select “Applications” -> “Connectors”. Enter "0X" (0X is the postfix assigned to you) to search for the connectors created by you. Select "Process Offer 0X" (0X is the postfix assigned to you) and click on "Open".
+1. On the navigation pane, select “Mobile Apps” -> “Connectors”. Enter "XX" (XX is the postfix assigned to you) to search for the connectors created by you. Select "Process Offer XX" (XX is the postfix assigned to you) and click on "Open".
 ![](../common/images/mobile/401-Test_Connector_Open_ProcessOffer.png)
 
-2. In 'General' step, make sure that the 'API Name' is set as 'ProcessOffer0X' (0X is the postfix assigned to you), and click 'Next'.
+2. In 'General' step, make sure that the 'API Name' is set as 'ProcessOfferXX' (0X is the postfix assigned to you), and click 'Next'.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_General.png)
 
-3. In 'Descriptor' step, make sure that the 'Remote URL' is set to the full service URL of the 'Process Offer' service on OIC, e.g. `https://integration-<ICS_DOMAIN_NAME>.integration.us2.oraclecloud.com/integration/flowapi/rest/C0X_ICS_INTMGT/v01/processoffer`. Click 'Next'.
+3. In 'Descriptor' step, make sure that the 'Remote URL' is set to the full service URL of the 'Process Offer' service on OIC, e.g. `https://<OIC_INSTANCE_NAME>-<OIC_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com/ic/api/integration/v1/flows/rest/CXX_ICS_INTMGT/1.0/processoffer`. Click 'Next'.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Descriptor.png)
 
 4. In 'Rules' step, click 'Next' as no rule is used. 
 
-5. In 'Security' step, make sure that security policy "oracle/http_basic_auth_over_ssl_client_policy" is selected, and the csf-key is set to 'ICS0X' (0X is the postfix assigned to you). Click 'Next'.
+5. In 'Security' step, make sure that security policy "oracle/http_basic_auth_over_ssl_client_policy" is selected, and the csf-key is set to 'ICSXX' (XX is the postfix assigned to you). Click 'Next'.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Security.png)
 
-6. Click 'Yes' to save.
+6. If `Confirm Save Before Testing` dialog window prompt, click 'Yes' to save.
 
    ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Save.png)
 
 7. In 'Test' step, select `POST` as the HTTP method, enter `{"customerid": 66890169,  "offerid": 10001,  "productid": 20001,  "accepted": false}` into the "HTTP Body".
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_1.png)
 
-8. Select your mobile backend (e.g.: `LoyaltyMgmt_MBE0X`) you created from the dropdown list in the “Authentication” section, and click on “Test Endpoint”.
+8. Select your mobile backend (e.g.: `LoyaltyMgmt_MBEXX`) you created from the dropdown list in the “Authentication” section, select “Anonymous” user and click on “Test Endpoint”.
 ![](../common/images/mobile/401-Test_Connector_ProcessOffer_Test_2.png)
 
 9. You shall see an HTTP 200 OK response at the bottom of the page and it is all set.
