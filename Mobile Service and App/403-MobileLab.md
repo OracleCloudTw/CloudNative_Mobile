@@ -3,7 +3,7 @@
 ## 403: Set up Push Notification and configure the mobile app ##
 
 ### Introduction ###
-You can use the Notifications service (part of MCS platform APIs) to send notifications to users of the apps registered in a mobile backend. Once you have the mobile backend set up for notifications, the process of sending the notifications is the same for both iOS, Android, and Windows apps. You set up notifications by obtaining the appropriate vendor certificates and registering them with the app's mobile backend. In addition, you can write your own code in the mobile app to process the push notification. MCS can also exposed the push notification service to other applications, so that applications, e.g. the Java App for campaign management, can send out push notification to end user by calling the push notification service exposed by MCS.
+You can use the Notifications service (part of OMCe platform APIs) to send notifications to users of the apps registered in a mobile backend. Once you have the mobile backend set up for notifications, the process of sending the notifications is the same for both iOS, Android, and Windows apps. You set up notifications by obtaining the appropriate vendor certificates and registering them with the app's mobile backend. In addition, you can write your own code in the mobile app to process the push notification. OMCe can also exposed the push notification service to other applications, so that applications, e.g. the Java App for campaign management, can send out push notification to end user by calling the push notification service exposed by OMCe.
 ![](../common/images/mobile/mcsgs_dt_006_notifications.png)
 
 ### About the Exercise Today ###
@@ -18,15 +18,11 @@ In this exercise, we will:
 ----
 #### Create a notifications profile ####
 A notification profile defines the certificate or keys that is required by push notification providers to send out push notifications. 
-In this lab, you will create a notifications profile and associate the that with the client application (Cafe Supremo mobile application), so that MCS can send push notification to the Cafe Supremo mobile application.
+In this lab, you will create a notifications profile and associate the that with the client application (Cafe Supremo mobile application), so that OMCe can send push notification to the Cafe Supremo mobile application.
 
-1. On the navigation pane, select “Applications” -> “Mobile Backends”. Enter "0X" (0X is the postfix assigned to you) to search for the mobile backend imported by you. Select "LoyaltyMgmt_MBE0X" (0X is the postfix assigned to you) and click on "Open".
-![](../common/images/mobile/403-Navigate_To_MBE.png)
+1. On the navigation pane, select “Mobile Apps” -> “Backends”. Enter "XX" (XX is the postfix assigned to you) to search for the mobile backend imported by you. Select "LoyaltyMgmt_MBEXX" (0X is the postfix assigned to you) and click on "Keys" arrow to expand the section.
 
-2. Switch to "Clients" tab, you should see a client called "MyAndroidClient0X" (0X is the postfix assigned to you) imported by you. There is no notification profile associated with the client. Click on the client "MyAndroidClient0X".
-![](../common/images/mobile/403-Select_Client.png)
-
-3. The settings of the client is displayed. Scroll down to check the "Application Key" of the client.
+You should see a client called "MyAndroidClientXX". Scroll right to find the "Application Key" column.
 ![](../common/images/mobile/403-Client_Settings.png)
 
 4. **Copy the values of "Application Key" and replace the value of the property "applicationKey" in the "Mobile_App_Settings_Sample.json" file.**  Save the file for later use.
