@@ -129,8 +129,6 @@ You mobile app should be configured to work with your mobile backend before you 
    ![](../common/images/mobile/401-MobileApp_Notification_Result.png)
 
 
-[Procced to Next - 404: Track customer behaviors (Optional)](404-MobileLab.md)
-
-or
+Congratulation! You have finished this lab section.
 
 [Back to Mobile Service and Application Home](README.md)

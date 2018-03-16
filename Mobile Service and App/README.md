@@ -93,10 +93,6 @@ Let's explore the Mobile Service and Application Lab. Please click the below lin
 
 [Click Here.](403-MobileLab.md)
 
-## 404: Track customer behaviors [Optional] ##
-
-[Click Here.](404-MobileLab.md)
-
 or
 
 [Back to Cloud Test Drive Home](../README.md)
