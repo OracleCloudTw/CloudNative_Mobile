@@ -88,11 +88,13 @@ The 'Process Offer' service deployed on OIC is configured to use 'Basic Authenti
 ![](../common/images/mobile/401-CSF_Navigate_To_CSF.png)
 
 2. In the **New CSF Key** area, enter the following information:  
--**Key Name**: ICSXX (XX is your assigned postfix)
--**Short Description**: ICSXX (Same as above or meaningful description)
--**User Name**: username used for Integration Cloud
--**Password**: password used for Integration Cloud
--**Confirmed Password**: Same as above
+
+  - **Key Name**: ICSXX (XX is your assigned postfix)
+  - **Short Description**: ICSXX (Same as above or meaningful description)
+  - **User Name**: username used for Integration Cloud
+  - **Password**: password used for Integration Cloud
+  - **Confirmed Password**: Same as above
+  
 Click `Save` button.
 ![](../common/images/mobile/401-CSF_Update_CSF.png)
 
