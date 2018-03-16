@@ -9,7 +9,7 @@ You can create custom REST APIs to build up a library of services that can be us
 ![](../common/images/mobile/mcsgc_dt_004_api.png)
 
 ### About the Exercise Today ###
-In the previous lab, you have created 3 connectors to integrate with external services, including the microservices on ACCS to query offers and generate QR code, and the service on ICS to accept or reject offer and update the existing CRM. As you might remember, those connectors are not directly exposed to mobile applications. Once you create connectors to access the services, you can use them in custom APIs (e.g. LoyaltyMgmt API), which you can then call from your mobile applications or external systems using standard REST calls. Custom API 'LoyaltyMgmt0X' in included in the MBE package and has been imported into MCS already in previous lab.
+In the previous lab, you have created 3 connectors to integrate with external services, including the microservices on ACCS to query offers and generate QR code, and the service on OIC to accept or reject offer and update the existing CRM. As you might remember, those connectors are not directly exposed to mobile applications. Once you create connectors to access the services, you can use them in custom APIs (e.g. LoyaltyMgmt API), which you can then call from your mobile applications or external systems using standard REST calls. Custom API 'LoyaltyMgmtXX' in included in the MBE package and has been imported into OMCe already in previous lab.
 
 In this lab, you will:
 - Verify the definition of the custom API
@@ -23,10 +23,10 @@ In this lab, you will:
 #### Verify the definition of the custom API for loyalty management ####
 In this lab, you will check the endpoints, security setting and implementation of the custom API for loyalty management, that you imported with the MBE package in previous lab. 
 
-1. On the navigation pane, select “Applications” -> “APIs”. Enter "0X" (0X is the postfix assigned to you) to search for the custom API created by you. Select "LoyaltyMgmt 0X" (0X is the postfix assigned to you) and click on "Open".
+1. On the navigation pane, select “Mobile Apps” -> “APIs”. Enter "XX" (XX is the postfix assigned to you) to search for the custom API created by you. Select "LoyaltyMgmt XX" (XX is the postfix assigned to you) and click on "Open".
 ![](../common/images/mobile/402-API_Navigate_and_Open.png)
 
-2. Make sure that the value of the "API Name" is "LoyaltyMgmt0X" (0X is the postfix assigned to you).
+2. Make sure that the value of the "API Name" is "LoyaltyMgmtXX" (XX is the postfix assigned to you).
 ![](../common/images/mobile/402-API_Verify_API_Name.png)
 
 3. Copy the values of "API Name" and replace the value of the property "API" in the "Mobile_App_Settings_Sample.json" file.  Save the file for later use.
@@ -50,7 +50,7 @@ In this lab, you will check the endpoints, security setting and implementation o
 
    ![](../common/images/mobile/402-API_Verify_Security.png)
 
-7. After the custom API has been defined, a mock service will be generated automatically to allow mobile developers to start using the API, without waiting for service developer to complete implementing the service. In this lab, the API implementation has been imported together with the MBE package. Switch to the “Implementation” tab, click to expand the "Dependencies for LoyaltyMgmt0X". Make sure that the implementation called "LoyaltyMgmt0X" is set to 'Default', and you can find connectors "GenerateQRCode0X", "QueryOffers0X" and "ProcessOffer0X" in the dependency list (0X is the postfix assigned to you).
+7. After the custom API has been defined, a mock service will be generated automatically to allow mobile developers to start using the API, without waiting for service developer to complete implementing the service. In this lab, the API implementation has been imported together with the MBE package. Switch to the “Implementation” tab, click to expand the "Dependencies for LoyaltyMgmtXX". Make sure that the implementation called "LoyaltyMgmtXX" is set to 'Default', and you can find connectors "GenerateQRCodeXX", "QueryOffersXX" and "ProcessOfferXX" in the dependency list (XX is the postfix assigned to you).
 ![](../common/images/mobile/402-API_Verify_Implementation.png)
 
 
@@ -64,7 +64,7 @@ Now that you have completed verifying the definition and implementation of the c
 2. In the API test console, the list of endpoints available for this API is shown. Take the service "Get offer QR code" as an example, click on "Get offer QR code" in the endpoint list on the left.
 ![](../common/images/mobile/402-API_Test_Select_Endpoint.png)
 
-3. Set "id" parameter with value `10001` and select `LoyaltyMgmt_MBE0X` (0X is the postfix assigned to you) in the "Mobile Backend" dropdown list, keep "Authentication Method" as `Default`. Click on "Test Endpoint" button to test the service.
+3. Set "id" parameter with value `10001` and select `LoyaltyMgmt_MBEXX` (XX is the postfix assigned to you) in the "Mobile Backend" dropdown list, keep "Authentication Method" as `Current User`. Click on "Test Endpoint" button to test the service.
 ![](../common/images/mobile/402-API_Test_Prepare_Request.png)
 
 4. You should get an response with response code "200" and content type "image/png". This is the QR code image returned by the "Generate QR Code" service that you deployed on ACCS.
