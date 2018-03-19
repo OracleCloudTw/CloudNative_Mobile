@@ -325,7 +325,7 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 ![](images/020.deployaccs-reuse.png)
 
-5. A window **Deploy to Application Container Cloud** will popup, confirm the information and **ENTER the password**, then click **[Test Connection]** button.  
+5. A window **Deploy to Application Container Cloud** will popup, provide the required information: 
 
 ![](images/185.test.png)
 
