@@ -25,23 +25,10 @@ To create the above 3 Connectors, you will:
 
 #### Import the MBE package ####
 
-**Alternatively, you can bypass step 1 to 6 by access to the Mobile Cloud URL which is available from Access Document provided by instructor**
+1. Following the **Lab 4xx Mobile** section of Access Document, click on the given URL:
+![](../common/images/mobile/400-AccessDoc.png)
 
-1. Sign in to Mobile Cloud by using the **Cloud Account with Identity Cloud Service** domain Id and credential provided in the Access Document.
-
-2. In the dashboard screen, click on "Open Service Console" under **Mobile** tile.
-![](../common/images/mobile/400-MobileEnvService.png)
-
-3. In the Oracle Cloud Stack service details screen, click on the name of Mobile Cloud.
-![](../common/images/mobile/400-MCS_ServiceInstanceURL.png)
-
-4. In the `Stack Overview` list of the selected Mobile Cloud, click on the name end with `CORE`.
-![](../common/images/mobile/400-OMC-Core.png)
-
-5. In the `xxxxxCORE` detail page, locate and expand the `Load Balancer` section, and copy the URL.
-![](../common/images/mobile/400-OMC-LB.png)
-
-6. The OMCe Portal URL is in the format: https://<URL above from `Load Balancer` section above>/mobileui
+6. After login with your **Cloud Account with Identity Cloud Service** username and password, the OMCe home page is shown:
 ![](../common/images/mobile/400-OMC-Home.png)
 
 7. In OMCe Portal, click on the hamburger icon located at the left top corner of the service introduction page. From the navigation pane, select “Mobile Apps” -> “Packages”, and click on the “New Import” green button.
@@ -62,7 +49,7 @@ To create the above 3 Connectors, you will:
 12. On the 'Policies' step, select the policy '*.connector/GenerateQRCodeXX(1.0).Connector_Endpoint' and click on 'Edit'.
 ![](../common/images/mobile/401-Import_Package_Select_GenerateQRCode_Endpoint.png)
 
-13. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegenerator-<OIC_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com`. Click 'Save'.
+13. Set a custom value as the Host URL of the QR code service deployed on ACCS, e.g. `https://qrcodegeneratorXX-<ACCS_DOMAIN_NAME>.<DATACENTER_LOCATION>.oraclecloud.com`. Click 'Save'.
 ![](../common/images/mobile/401-Import_Package_Update_GenerateQRCode_Endpoint.png)
 
 14. Back in the 'Policies' step, select the policy '*.connector/QueryOffersXX(1.0).Connector_Endpoint' and click on 'Edit'.
