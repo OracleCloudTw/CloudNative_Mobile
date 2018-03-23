@@ -12,7 +12,7 @@ In this exercise, we will:
 - Examine test results from varies OIC monitoring facilities
 
 ### Prerequisites ###
-- Oracle Public Cloud Service account including Integration Cloud Service
+- Oracle Public Cloud Service account including Integration Cloud
 - SOAP and REST connections and an orchestration flow in OIC already configured (303-IntegrationsLab.md)
 
 #### Testing and Monitoring Your Work on OIC ####
@@ -40,18 +40,18 @@ In this exercise, we will:
 
 ![](images/304/00.postman.body.png)
 
-(\*Notice: The tests above are not using real data, it just aims for testing the availability of API on ICS)
+(\*Notice: The tests above are not using real data, it just aims for testing the availability of API on OIC)
 
 5. Click `Send` button to fire the request, you have received Status `200 OK` and response body content like below.
 
 ![](images/304/00.postman.response.png)
 
-6. Back to ICS, click the hamburger menu icon on top left corner, and then click `Monitoring`.
+6. Back to OIC, click the hamburger menu icon on top left corner, and then click `Monitoring`.
 
 ![](images/304/03.monitoring.home.png)
 
-7. By default, the ICS Monitoring **Dashboard** is shown.
-    The dashboard summarizes entire ICS traffic condition/trend amongst, *CONNECTIONS*, *INTEGRATIONS*, *SUCCESS*, *FAILURES* and other information, which are critical to integration monitoring.  
+7. By default, the OIC Monitoring **Dashboard** is shown.
+    The dashboard summarizes entire OIC traffic condition/trend amongst, *CONNECTIONS*, *INTEGRATIONS*, *SUCCESS*, *FAILURES* and other information, which are critical to integration monitoring.  
 	(Optional) Notice on the right of dashboard, you can access to `Activity Stream`, `Download Diagnotics Logs` and `Download Incident`. Feel free to further explore.
 
 ![](images/304/04.monitoring.dashboard.png)
@@ -85,8 +85,8 @@ In this exercise, we will:
 ![](images/304/09.monitoring.audit.png)
 ![](images/304/10.monitoring.audit1.png)
 
-13. Finally, we can logout from Integration Cloud Service before proceed to next lab exercise.  
-On the top right corner of ICS dashboard, click on your username and then click `Sign Out`.
+13. Finally, we can logout from Integration Cloud before proceed to next lab exercise.  
+On the top right corner of OIC dashboard, click on your username and then click `Sign Out`.
 
 ![](images/304/11.logout.png)
 

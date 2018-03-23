@@ -27,7 +27,7 @@ In this exercise, we will:
 
 ![alt text](images/102/05.new.job.png "Create new build job")
 
-3. Enter name *LoyaltyManagementBuild* for the new job. Select the *Create a free-style job* option and save.
+3. Enter name **LoyaltyManagementBuild** for the new job. Select the **Create a free-style job** option and save.
 On the Main configuration page of the newly created job make sure **Default (The default Java version in the executing environment)** is the selected JDK.
 
 ![alt text](images/102/06.job.main.png "Configure job")
@@ -71,7 +71,8 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 - **Deployment Target**: click **New** and select **Java Cloud Service** and define connection properties:  
 --**Version: Oracle Weblogic Server 12c (12.2.x or higher)**  
 --**Protocol: SSH Tunnel**  
---**Host: [\(Find out the Java Cloud Service Host and HTTPS Port.\)](java.cloud.md)**  
+--**Host: (The WebLogic Server host address can be found from your access document) [\(Or find out the Java Cloud Service Host and HTTPS Port.\)](java.cloud.md)**  
+![alt text](images/102/12.deploy.jcs.png "JCS/WebLogic IP")
 --**HTTPS Port: 7002 (Default)**  
 --**Administration Port: 9001 (Default)**  
 --**credentials**  
@@ -117,7 +118,7 @@ or
 ![alt text](images/102/17.deployment.png "Deployments")
 
 17. The Loyalty Management application URL should be in the format of:  
-    `https://**<JCS WLS instance IP Address>**/loyalty/jsp/welcome.jsp`, the JCS WLS instance IP address is the same as **Deploy to JCS** target in DevCS at step 12.
+    `http://<JCS WLS instance IP Address>/loyalty/jsp/welcome.jsp`, the JCS WLS instance IP address is the same as **Deploy to JCS** target in DevCS at step 12.
 
 ![alt text](images/102/18.sample.app.png "Loyalty Management Application")
 

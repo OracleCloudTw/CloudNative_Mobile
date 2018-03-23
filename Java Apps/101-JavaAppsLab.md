@@ -41,16 +41,22 @@ according to the datacenter of your environment listed in access document.  Clic
 4. Enter the DevCS username and password of user with Service Administrator role. Click **Sign In**.
 ![](images/sign-in/sign.04.credentials.png)
 
-5. After a successful login you will see your Dashboard.  
-On the Dashboard there are predefined tiles for different services. If the **Developer Cloud Service** tile doesn't appear, click **Customize Dashboard** and mark the **developer** service to show on the dashboard.
-![](images/sign-in/sign.05.dashboard.new.png)
-![](images/sign-in/sign.06.customize.png)
+5. After a successful login you will see your Dashboard. Click on the **Oracle Developer Cloud Service**.
+![](images/sign-in/sign.05.dashboard.alternative.png)
 
-#### Create Oracle Developer Cloud Service project ####
+Alternatively, you may see another Dashboard layout like below:
+![](images/sign-in/sign.05.dashboard.new.png)
+
+On the Dashboard there are predefined tiles for different services. If the **Developer Cloud Service** tile doesn't appear, click **Customize Dashboard** and mark the **developer** service to show on the dashboard.
+
+![](images/sign-in/sign.06.customize.png)
 
 6. Now, find the Developer Service tile and click the hamburger icon. In the dropdown menu click **Open Service Console**.
 
 ![](images/101/01.dashboard.new.png)
+
+
+#### Create Oracle Developer Cloud Service project ####
 
 7. Log in to Oracle Developer Cloud Service and create a new project.
 

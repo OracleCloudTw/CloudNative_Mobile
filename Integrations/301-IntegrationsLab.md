@@ -15,23 +15,13 @@ In this exercise, we will:
 
 #### Navigating Oracle Integration Cloud Service ####
 
-1. Sign in to Cloud from [https://cloud.oracle.com/sign-in](https://cloud.oracle.com/sign-in), first select your datacenter then provide the identity domain and credential of **Integration Cloud \(OIC\)**.  
+1. Refer the access document, click to open the OIC URL at the **Lab 3xx Integration** section:
 
-**Alternatively  you can access thru the Access Document - Integrations Lab section provided by instructor.**  
+![](images/301/00.access.doc.png)
 
-After a successful login you will see your Dashboard. Find the **Integration Cloud** services tile and click the hamburger icon. In the dropdown menu click `Open Service Console`.
+2. You will be prompted with login page, login using your **Cloud Account with Identity Cloud Service** username and password, which is provided from access document.
 
-![](images/301/01.dashboard.png)
-
-2. If you cannot find the **Integration Cloud** service tile, click `Customize Dashboard` button at top right corner of browser, and then click `Show` button at the integration section of the **Customize Dashboard** dialog window.
-
-![](images/301/02.dashboard.png)
-
-3. From the Integration Cloud dashboard, click on the hamburger icon on the right of OIC instance listed, then select `Open Integration Cloud Home Page`.
-
-![](images/301/02.oic.png)
-
-3. On Service Console opened, the OIC home page is displayed as following:
+3. The OIC home page is displayed as following:
 
 ![](images/301/03.home.png)
 
