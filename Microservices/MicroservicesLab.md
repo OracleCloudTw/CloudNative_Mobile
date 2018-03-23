@@ -313,7 +313,7 @@ Building stage: please wait - it might takes a few minutes before the job change
 3. Enter the following data:
 
   - **Configuration Name:** QRCodeGeneratorDeploy
-  - **Application Name:** qrcodegeneratorXX `(Where XX is your assigned Group Number)`
+  - **Application Name:** qrcodegeneratorXX `(Where XX is your assigned Group Number, e.g. qrcodegenerator03)`
   
 ```diff
 -Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
