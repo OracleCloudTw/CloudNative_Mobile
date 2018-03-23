@@ -43,7 +43,7 @@ Then click `Create Offer` button.
 ![](images/502/04.offer.sent.png)
 
 **What has just happened?**    
-On previous lab: [501: Update Source Code for Sending Push Notification from JEE Application to Mobile Cloud Service](501-PuttingAllTogetherLab.md), we modified some code in *confirm.jsp* under loyalty management JEE application leveraging Developer and Java Cloud Service, such that the application can call Mobile Cloud Service push notification REST API, followed by MCS exchanging with Google Firebase to deliver the push notification towards the registered Android device.
+On previous lab: [501: Update Source Code for Sending Push Notification from JEE Application to Mobile Cloud Service](501-PuttingAllTogetherLab.md), we modified some code in *confirm.jsp* under loyalty management JEE application leveraging Developer and Java Cloud Service, such that the application can call Mobile Cloud Service push notification REST API, followed by OMCe exchanging with Google Firebase to deliver the push notification towards the registered Android device.
 
 ![](images/502/jcs2mcs.png)
 
@@ -79,7 +79,7 @@ On early [Microservice Lab](../Microservices/README.md), we have deployed a micr
 
 ![](images/502/09.offer.mcs.png)
 
-10. From ICS dashboard, go to `Monitoring` -> `Tracking`, you should be able to locate the recent offer respond action message track. For more about ICS monitoring, please refer to [304: Testing the service and Monitoring with ICS Dashboards](../Integrations/304-IntegrationsLab.md)
+10. From OIC dashboard, go to `Monitoring` -> `Tracking`, you should be able to locate the recent offer respond action message track. For more about OIC monitoring, please refer to [304: Testing the service and Monitoring with OIC Dashboards](../Integrations/304-IntegrationsLab.md)
 
 ![](images/502/10.offer.ics.png)
 

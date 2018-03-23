@@ -313,13 +313,13 @@ Building stage: please wait - it might takes a few minutes before the job change
 3. Enter the following data:
 
   - **Configuration Name:** QRCodeGeneratorDeploy
-  - **Application Name:** qrcodegenerator
+  - **Application Name:** qrcodegeneratorXX `(Where XX is your assigned Group Number)`
   
 ```diff
 -Please BE CAREFUL that you have not added extra white space before or after the information when copy-n-paste
 ```
 
-![](images/183.createdeploy.png)
+![](images/183.createdeploy1.png)
 
 4. Next to the right hand side of **Deployment Target**, click the **[New]** button and select **Application Container Cloud...**
 
@@ -331,8 +331,15 @@ Building stage: please wait - it might takes a few minutes before the job change
 
   - **Data Center:** `your datacenter, e.g. em2, em3, etc`
   - **Identity Domain:** `your  Identity Service Id, which can be obtained from:`  
-    Access to Application Container Cloud Service dashboard  
+    Access to Application Container Cloud Service dashboard, i.e.  
 	
+	Open a new browser, login using **Cloud Account with Identity Cloud Service**
+	![](185.test.login.accs.png)
+	
+	Enter your **Cloud Account with Identity Cloud Service username and password**
+	![](185.test.login1.accs.png)
+	
+	Enter the Application Container Cloud Service detail page.
     ![](images/185.test.accs.png)  
 	
     Copy the `Identity Service Id` from the ACCS dashboard, and paste the Id into **Identity Domain** text box  
@@ -354,7 +361,7 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 **MAKE sure you select Node as the Runtime**
 
-![](images/187.choosenode.png)
+![](images/187.choosenode1.png)
 
 8. Select from the **Job**, this name should match the build job above, e.g. `QR Code Generator Build`. Select from the **Artifact**, this name should match the archive artifact above and the package.json of your source code, e.g. `target/qrcodegenerator.zip`  
 
@@ -377,11 +384,11 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 11. In your deployment job, click the gear drop down and select **Start**
 
-![](images/190.start.png)
+![](images/190.start1.png)
 
 12. The deployment job will be put into a queue for process. Wait until the message **Starting application** changes to **Last deployment succeeded**. Ask for help from your instructor if the deployment fails.
 
-![](images/191.deployed.png)
+![](images/191.deployed1.png)
 
 ## 2.4 Login to Oracle Application Container Cloud Service
 
@@ -393,7 +400,7 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 3. On the ACCS Service Console you can view all the deployed applications including our newly create **qrcodegenerator**.
 
-![](images/193.accsqr.png)
+![](images/193.accsqr1.png)
 
 4. Copy the URL and paste it into the address bar of a new tab to bring up the application.
 
@@ -403,9 +410,9 @@ Building stage: please wait - it might takes a few minutes before the job change
 
 	{URL copied from ACCS Service Console}/ctdqr/v1/offer/10001  
 	or  
-	https://qrcodegenerator-{your-identity-domain}.{datacenter-location}.oraclecloud.com/ctdqr/v1/offer/10001
+	https://qrcodegeneratorXX-{your-identity-domain}.{datacenter-location}.oraclecloud.com/ctdqr/v1/offer/10001
 
-![](images/194.qrurl.png)		
+![](images/194.qrurl1.png)		
 
 5. the QR Code in the browser will look like this
 

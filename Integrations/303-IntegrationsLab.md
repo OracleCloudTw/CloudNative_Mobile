@@ -151,7 +151,7 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 	
 ![](images/303/37.integration.if.map1.png)
 
-27. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegenerator-<Your Application Container Cloud Identity Domain Hostname>/ctdqr/v1/offer/'`, notice don't forget to put the single quote in the front and the end of the URL. (Hostname obtained from 'Microservices' lab)  
+27. Click on `string1`, enter the QR code URL without the offer id including ' ' sign, i.e. `'https://qrcodegeneratorXX-<Your Application Container Cloud Identity Domain Name>.<Your Datacenter Location Name>.oraclecloud.com/ctdqr/v1/offer/'`, notice don't forget to put the single quote in the front and the end of the URL. (Hostname obtained from 'Microservices' lab)  
     Next, expand `Source` from the left pane, drag the `offerid` field and drop it onto `string2`. A string is automatically inserted. \(This is the XSLT variable representation of 'offerid'\)  
 	Click `Save`, and then click `Close` button at the bottom to return previous screen.
 
@@ -184,14 +184,14 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
     Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on when serving production traffic.  
 	Click `Activate` button at the bottom.
 
-![](images/303/44.integration.activate.png)
+![](images/303/44.integration.activate1.png)
 
 34. Wait for a couple of minutes for the integration activation.  
     Once it is done, a green banner telling the integration was activated successfully and the result looks like below:
 
-![](images/303/45.integration.activate.done.png)
+![](images/303/45.integration.activate.done1.png)
 
-35. Save or copy into clipboard from your browser the unique URL: `https://integration-xxxxxxxxxxx.integration.xxx.oraclecloud.com:443/integration/flowapi/rest/XXX_ICS_INTMGT/`
+35. Save or copy into clipboard from your browser the unique URL: `https://XXX-XXXXXXXX.XXXXXXXXXX.oraclecloud.com/ic/api/integration/v1/flows/rest/CXX_ICS_INTMGT/1.0/XXXXXX`
 
 36. The integration service is now ready for testing.
 
