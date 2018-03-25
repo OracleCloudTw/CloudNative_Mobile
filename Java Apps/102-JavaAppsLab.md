@@ -86,6 +86,7 @@ Change to **Deploy** page in DevCS and create **New Configuration**
 ![alt text](images/102/13.jcs.config.png "JCS Configuration")
 
 **[Optional]**
+
 ![alt text](images/102/13.cert.png "Certificate Warning")   
   If you see the certificate warning, **Check** `Accept this certificate when connecting to this JCS instance` and click [**OK**]
 
