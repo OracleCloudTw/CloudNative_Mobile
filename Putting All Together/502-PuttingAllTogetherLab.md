@@ -75,7 +75,7 @@ On early [Microservice Lab](../Microservices/README.md), we have deployed a micr
 
 ![](images/502/mcs2acc.png)
 
-9. From MCS dashboard, go to `Applications` -> `Mobile Backends` -> `Your Loyalty Management API`, you should be able to find the recent API calls from mobile and average response time. For more about MCS monitoring, please refer to [404: Track customer behaviors](../Mobile%20Service%20and%20App/404-MobileLab.md)
+9. From OMCe dashboard, go to `Applications` -> `Mobile Backends` -> `Your Loyalty Management API`, you should be able to find the recent API calls from mobile and average response time.
 
 ![](images/502/09.offer.mcs.png)
 
