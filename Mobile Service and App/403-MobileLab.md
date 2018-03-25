@@ -41,7 +41,7 @@ You should see a client called "MyAndroidClientXX". Scroll right to find the "Ap
 
    ![](../common/images/mobile/403-Create_New_Profile.png)
 
-7. The notification profile has been created and associated with the your client "MyAndroidClientXX". Click on the link "< LoyaltyMgmt_MBEXX" in the navigation bar to navigate back to the mobile backend.
+7. The notification profile has been created and associated with the your client "MyAndroidClientXX". Click on the button **Take Me Back** in the navigation bar to navigate back to the mobile backend.
 ![](../common/images/mobile/403-Profile_Navigate_Back.png)
 
 8. Verify that your client is "Notification Enabled".

@@ -73,7 +73,7 @@ Do not change anything and click `Cancel` button at top right corner to return t
 12. The **Map to CustomerServiceActivity** page is shown.  
 Notice that there are some green tick radio buttons on some of fields in **Source** tree at left hand side, and on some of fields in **Target** tree at right hand side. It means mappings have been configured and used between these source to target field entities. (Already done during import)  
 For example, the `customerId` under **Target** tree has been mapped with the same name field entity `customerId` from **Source** tree.  
-Now, let's explore the second field `activityName` under **Target**, click the text named `f(x), offerid, of acceptance, accepted` under **Mapping** column like below.
+Now, let's explore the second field `activityName` under **Target**, click the text named `f(x) Offer ID: , offerid, of acceptance , accepted` under **Mapping** column like below.
 
 ![](images/303/06.integration.map1.png)
 
@@ -84,7 +84,7 @@ Once review is done, click `Close` button at the bottom right corner.
 
 ![](images/303/06.integration.map2.png)
 
-14. Back to the **Map to CustomerServiceActivity** page screen, click the text named `f(x), productid` under **Mapping** column like below.
+14. Back to the **Map to CustomerServiceActivity** page screen, click the text named `f(x) Offer for product ID:, productid` under **Mapping** column like below.
 
 ![](images/303/06.integration.map3a.png)
 
@@ -171,7 +171,7 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 
 31. The **Business Identifiers for Tracking** dialog window is shown.  
     Business identifier is required for runtime transaction tracking on messages, espeically when hundreds and thousands of messages running thru OIC.  
-    Notice the tracking business identifiers: `customerid`, `offerid` and `productid` have already been mapped. The screen looks like below.  
+    Notice the tracking business identifiers: `customerid` and `offerid` have already been mapped. The screen looks like below.  
 	Click `Cancel` button at the bottom on review completion of tracking setup to close the dialog.
 
 ![](images/303/43.integration.tracking.identifier1.png)
@@ -180,7 +180,7 @@ Click `Actions` on the right side pane, then drag the `Map` and drop it onto the
 
 ![](images/303/43.integration.edit.done.png)
 
-33. From the **Integrations** Summary page, click on the **Switch** button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
+33. From the **Integrations** Summary page, click on the **Switch** ![](images/303/44.integration.activate.button.png) button of your newly created `integration`, the `Activate Integration?` dialog window is shown.  
     Check `Enable tracing` and `Include payload` for testing later, although this is not recommended to turn on when serving production traffic.  
 	Click `Activate` button at the bottom.
 
