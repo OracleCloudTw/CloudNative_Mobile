@@ -99,7 +99,7 @@ Once review is done, click `Close` button at the bottom right corner.
 ![](images/303/06.integration.map4a.png)
 
 17. The **Build Mappings** dialog window is shown with the imported mapping:  
-`<xsl:value-of select = 'fn:current-data()'>`  
+`<xsl:value-of select = 'fn:current-date()'>`  
 This is an out-of-the-box function provided by Integration Cloud Service, feel free to locate this function (under Functions->Date category) and many other functions by expand the **Mapping Component** tree at the bottom left corner.  
 Once review is done, click `Close` button at the bottom right corner.
 
